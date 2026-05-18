@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="메르세데스-벤츠 E 300 4MATIC AMG Line vs BMW 530i M Sport xDrive — 2026 프리미엄 세단 교육 비교" />
-  <title>E 300 AMG Line vs 530i M Sport | 프리미엄 세단 배틀</title>
+  <title>Mercedes-Benz vs BMW | 프리미엄 브랜드 완전 비교</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -12,7 +11,7 @@
 </head>
 <body>
 
-<!-- ── LOADING SCREEN ─────────────────────────────────────── -->
+<!-- LOADER -->
 <div id="loader">
   <div class="loader-inner">
     <div class="loader-logos">
@@ -21,11 +20,11 @@
       <span class="loader-circle">◎</span>
     </div>
     <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
-    <p class="loader-label">Premium Sedan Battle · 2026</p>
+    <p class="loader-label">Mercedes-Benz vs BMW · Premium Brand Battle</p>
   </div>
 </div>
 
-<!-- ── NAVIGATION ─────────────────────────────────────────── -->
+<!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
     <div class="nav-brand">
@@ -36,8 +35,8 @@
     <div class="nav-slide-info">
       <span class="nav-slide-label" id="navSlideLabel">INTRO</span>
     </div>
-    <div class="nav-counter" id="navCounter">1 / 7</div>
-    <button class="nav-fs-btn" id="fullscreenBtn" title="전체화면">
+    <div class="nav-counter" id="navCounter">1 / 8</div>
+    <button class="nav-fs-btn" id="fullscreenBtn" title="전체화면" onclick="toggleFullscreen()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="fsIcon">
         <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
         <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
@@ -46,593 +45,627 @@
   </div>
 </nav>
 
-<!-- ── SLIDES CONTAINER ───────────────────────────────────── -->
+<!-- SLIDES -->
 <div id="slidesContainer">
 
-  <!-- ══ SLIDE 0: HERO ════════════════════════════════════ -->
-  <div class="slide slide-hero active" data-slide="0" data-label="INTRO">
-    <canvas id="heroCanvas"></canvas>
-    <div class="hero-content">
-      <div class="hero-split">
-        <div class="hero-side hero-benz">
-          <div class="hs-brand">MERCEDES-BENZ</div>
-          <div class="hs-model">E 300</div>
-          <div class="hs-trim">4MATIC AMG Line</div>
-          <div class="hs-year">W214 · 2026 MY</div>
-        </div>
-        <div class="hero-divider">
-          <div class="hero-vs">VS</div>
-        </div>
-        <div class="hero-side hero-bmw">
-          <div class="hs-brand">BMW</div>
-          <div class="hs-model">530i</div>
-          <div class="hs-trim">M Sport xDrive P1</div>
-          <div class="hs-year">G60 · 2026 MY</div>
-        </div>
+<!-- ══ SLIDE 0: HERO ══ -->
+<div class="slide slide-hero active" data-slide="0" data-label="INTRO">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-content">
+    <p class="hero-eyebrow">프리미엄 자동차 브랜드 심층 비교</p>
+    <div class="hero-split">
+      <div class="hero-side hero-benz">
+        <div class="hs-emblem">✦</div>
+        <div class="hs-brand">MERCEDES-BENZ</div>
+        <div class="hs-motto">"Das Beste oder nichts"</div>
+        <div class="hs-since">Est. 1886 · Stuttgart</div>
       </div>
-      <div class="hero-tagline">
-        <p class="ht-main">같은 숫자, 다른 철학</p>
-        <div class="ht-stats">
-          <span>258 마력</span><span class="dot">·</span>
-          <span>0→100km/h 6.1초</span><span class="dot">·</span>
-          <span>복합연비 11.1km/L</span><span class="dot">·</span>
-          <span>공차중량 1,905kg</span>
-        </div>
+      <div class="hero-divider"><div class="hero-vs">VS</div></div>
+      <div class="hero-side hero-bmw">
+        <div class="hs-emblem">◎</div>
+        <div class="hs-brand">BMW</div>
+        <div class="hs-motto">"Sheer Driving Pleasure"</div>
+        <div class="hs-since">Est. 1916 · München</div>
       </div>
     </div>
-    <button class="slide-next-hint" id="heroNextBtn">
-      <span>시작하기</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
+    <p class="hero-tagline-main">같은 럭셔리, 다른 철학</p>
+    <div class="ht-stats">
+      <span>140년 라이벌</span><span class="dot">·</span>
+      <span>글로벌 판매 1·2위</span><span class="dot">·</span>
+      <span>한국 수입차 시장 양강</span><span class="dot">·</span>
+      <span>6가지 테마로 완전 해부</span>
+    </div>
   </div>
+  <button class="slide-next-hint" id="heroNextBtn">
+    <span>시작하기</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
 
-  <!-- ══ SLIDE 1: OVERVIEW ═══════════════════════════════ -->
-  <div class="slide" data-slide="1" data-label="개요">
-    <div class="slide-body">
-      <div class="sec-header">
-        <span class="sec-label">OVERVIEW</span>
-        <h2>두 차의 핵심 제원</h2>
-        <p>동급 최강의 럭셔리 세단, 핵심 수치로 비교합니다</p>
+<!-- ══ SLIDE 1: 목차 ══ -->
+<div class="slide slide-toc" data-slide="1" data-label="목차">
+  <div class="slide-body">
+    <div class="toc-header">
+      <h2>오늘 다룰 내용</h2>
+    </div>
+    <div class="toc-grid">
+      <div class="toc-item" data-target="2">
+        <div class="toc-num">01</div>
+        <div class="toc-rule"></div>
+        <div class="toc-title">브랜드 철학 &amp; 역사</div>
+        <div class="toc-desc">두 브랜드의 탄생 배경과 핵심 가치</div>
       </div>
-      <div class="overview-grid">
-        <div class="ov-card benz-card">
-          <div class="ov-head">
-            <div class="ov-badge benz-badge">✦</div>
-            <div>
-              <div class="ov-maker">Mercedes-Benz</div>
-              <div class="ov-model">E 300 4MATIC AMG Line</div>
-              <div class="ov-code">W214 · 2026 Model Year</div>
-            </div>
-          </div>
-          <div class="ov-stats">
-            <div class="ov-stat"><span class="ov-val">9,770<sub>만원</sub></span><span class="ov-lbl">판매 가격</span></div>
-            <div class="ov-stat"><span class="ov-val">258<sub>hp</sub></span><span class="ov-lbl">최고 출력</span></div>
-            <div class="ov-stat"><span class="ov-val">6.1<sub>초</sub></span><span class="ov-lbl">0→100km/h</span></div>
-            <div class="ov-stat"><span class="ov-val">540<sub>L</sub></span><span class="ov-lbl">트렁크 용량</span></div>
-          </div>
-        </div>
-
-        <div class="ov-shared">
-          <h3>공통 사양</h3>
-          <ul class="shared-list">
-            <li><span>최고 출력</span><span>258 hp</span></li>
-            <li><span>최대 토크</span><span>40.8 kgm</span></li>
-            <li><span>0→100km/h</span><span>6.1 초</span></li>
-            <li><span>최고 속도</span><span>250 km/h</span></li>
-            <li><span>공차 중량</span><span>1,905 kg</span></li>
-            <li><span>복합 연비</span><span>11.1 km/L</span></li>
-            <li><span>연비 등급</span><span>4등급</span></li>
-            <li><span>구동 방식</span><span>AWD</span></li>
-            <li><span>배기량</span><span>1,999 cc</span></li>
-            <li><span>엔진</span><span>직렬 4기통 48V MHD</span></li>
-          </ul>
-        </div>
-
-        <div class="ov-card bmw-card">
-          <div class="ov-head">
-            <div class="ov-badge bmw-badge">◎</div>
-            <div>
-              <div class="ov-maker">BMW</div>
-              <div class="ov-model">530i M Sport xDrive P1</div>
-              <div class="ov-code">G60 · 2026 Model Year</div>
-            </div>
-          </div>
-          <div class="ov-stats">
-            <div class="ov-stat"><span class="ov-val">8,900<sub>만원</sub></span><span class="ov-lbl">판매 가격</span></div>
-            <div class="ov-stat"><span class="ov-val">258<sub>hp</sub></span><span class="ov-lbl">최고 출력</span></div>
-            <div class="ov-stat"><span class="ov-val">6.1<sub>초</sub></span><span class="ov-lbl">0→100km/h</span></div>
-            <div class="ov-stat"><span class="ov-val">520<sub>L</sub></span><span class="ov-lbl">트렁크 용량</span></div>
-          </div>
-        </div>
+      <div class="toc-item" data-target="3">
+        <div class="toc-num">02</div>
+        <div class="toc-rule"></div>
+        <div class="toc-title">디자인 비교</div>
+        <div class="toc-desc">외관 스타일과 인테리어 철학</div>
+      </div>
+      <div class="toc-item" data-target="4">
+        <div class="toc-num">03</div>
+        <div class="toc-rule"></div>
+        <div class="toc-title">성능 &amp; 주행감</div>
+        <div class="toc-desc">엔진, 핸들링, 승차감 심층 분석</div>
+      </div>
+      <div class="toc-item" data-target="5">
+        <div class="toc-num">04</div>
+        <div class="toc-rule"></div>
+        <div class="toc-title">기술 &amp; 혁신</div>
+        <div class="toc-desc">첨단 기능과 자율주행 기술 비교</div>
+      </div>
+      <div class="toc-item" data-target="6">
+        <div class="toc-num">05</div>
+        <div class="toc-rule"></div>
+        <div class="toc-title">가격 &amp; 유지보수</div>
+        <div class="toc-desc">구매 비용과 장기적 가치 분석</div>
+      </div>
+      <div class="toc-item" data-target="7">
+        <div class="toc-num">06</div>
+        <div class="toc-rule"></div>
+        <div class="toc-title">소비자 분석 &amp; 종합 추천</div>
+        <div class="toc-desc">타겟층 분석 및 최종 선택 가이드</div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ══ SLIDE 2: 3D VIEWER ══════════════════════════════ -->
-  <div class="slide slide-viewer" data-slide="2" data-label="3D 뷰어">
-    <div class="slide-body slide-body-viewer">
-      <div class="sec-header sec-header-sm">
-        <span class="sec-label">3D VIEWER</span>
-        <h2>인터랙티브 3D 뷰어</h2>
-        <p>마우스로 드래그하여 차량을 360° 회전 · 스크롤로 줌인/아웃</p>
-      </div>
-      <div class="viewer-wrap">
-        <div class="viewer-half viewer-benz">
-          <iframe
-            class="viewer-frame"
-            title="2024 Mercedes-Benz E-Class AMG Line"
-            src="https://sketchfab.com/models/471ae365d79c488399ec04ca2c5bc51b/embed?autostart=1&ui_infos=0&ui_stop=0&autospin=0&dnt=1&ui_hint=0"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            allowfullscreen frameborder="0"
-          ></iframe>
-          <div class="viewer-caption viewer-benz-caption">
-            <span class="viewer-brand-dot">✦</span>
-            <span class="viewer-car-name">E 300 AMG Line</span>
-            <span class="viewer-brand-label">Mercedes-Benz W214</span>
-          </div>
-          <div class="viewer-glow benz-glow"></div>
-        </div>
-        <div class="viewer-sep"></div>
-        <div class="viewer-half viewer-bmw">
-          <iframe
-            class="viewer-frame"
-            title="2024 BMW 5-Series G60"
-            src="https://sketchfab.com/models/ee328c2302494193a05cb4949b17ae55/embed?autostart=1&ui_infos=0&ui_stop=0&autospin=0&dnt=1&ui_hint=0"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            allowfullscreen frameborder="0"
-          ></iframe>
-          <div class="viewer-caption viewer-bmw-caption">
-            <span class="viewer-brand-dot">◎</span>
-            <span class="viewer-car-name">530i M Sport</span>
-            <span class="viewer-brand-label">BMW G60</span>
-          </div>
-          <div class="viewer-glow bmw-glow"></div>
-        </div>
-      </div>
+<!-- ══ SLIDE 2: 브랜드 철학 & 역사 ══ -->
+<div class="slide slide-scrollable" data-slide="2" data-label="브랜드 역사">
+  <div class="slide-body-scroll">
+    <div class="sec-header sec-header-sm">
+      <span class="sec-label">BRAND HISTORY</span>
+      <h2>브랜드 철학 &amp; 역사</h2>
+      <p>항목을 <strong>클릭</strong>하면 상세 설명이 표시됩니다</p>
     </div>
-  </div>
-
-  <!-- ══ SLIDE 3: PERFORMANCE ════════════════════════════ -->
-  <div class="slide" data-slide="3" data-label="성능">
-    <div class="slide-body">
-      <div class="sec-header">
-        <span class="sec-label">PERFORMANCE</span>
-        <h2>퍼포먼스 비교</h2>
-        <p>숫자로 보는 두 차의 성능 차이</p>
+    <div class="img-banner">
+      <img src="images/history.png" alt="브랜드 역사" />
+    </div>
+    <div class="two-col-grid">
+      <!-- Benz -->
+      <div class="brand-col benz-col">
+        <div class="brand-col-head">
+          <div class="brand-badge benz-badge-bg">✦</div>
+          <div>
+            <div class="brand-col-label">Mercedes-Benz</div>
+            <div class="brand-col-founding">1886년 창립</div>
+          </div>
+        </div>
+        <div class="brand-motto">"Das Beste oder nichts" — 최선이 아니면 아무것도 아니다</div>
+        <div class="item-list">
+          <div class="iitem clickable" data-car="benz" data-feature="세계 최초의 자동차 (1886)" data-detail="카를 벤츠(Karl Benz)가 1886년 가솔린 엔진을 탑재한 'Benz Patent-Motorwagen'을 발명했습니다. 이것이 세계 최초의 자동차로 공식 인정됩니다. 같은 해 고틀리프 다임러(Gottlieb Daimler)도 독자적으로 오토바이와 마차형 자동차를 개발했습니다. 두 사람은 서로를 몰랐지만 같은 해에 자동차를 독립적으로 발명한 셈입니다.">
+            <span class="iitem-year">1886</span> 세계 최초의 자동차 발명
+          </div>
+          <div class="iitem clickable" data-car="benz" data-feature="메르세데스 브랜드명 탄생 (1902)" data-detail="오스트리아 사업가 에밀 옐리네크(Emil Jellinek)가 자신의 딸 메르세데스(Mercédès)의 이름을 따 자동차 이름을 지었습니다. 당시 다임러가 만든 레이싱카에 이 이름을 사용했고, 대중에게 큰 인기를 얻으면서 브랜드명으로 자리잡았습니다. 이후 1903년 다임러는 모든 자동차에 '메르세데스' 명칭을 사용하기 시작했습니다.">
+            <span class="iitem-year">1902</span> '메르세데스' 브랜드명 탄생
+          </div>
+          <div class="iitem clickable" data-car="benz" data-feature="다임러-벤츠 합병 (1926)" data-detail="1926년 6월 28일, 다임러-모토렌-게젤샤프트(DMG)와 벤츠&시에(Benz & Cie)가 합병하여 다임러-벤츠 AG가 탄생했습니다. 이와 함께 '메르세데스-벤츠' 브랜드가 공식 출범했습니다. 대공황의 파고를 이겨내기 위한 생존 전략이었지만, 결과적으로 세계 최고의 자동차 브랜드 중 하나를 만들어냈습니다.">
+            <span class="iitem-year">1926</span> 다임러-벤츠 합병, 브랜드 탄생
+          </div>
+          <div class="iitem clickable" data-car="benz" data-feature="300 SL 걸윙 도어 (1954)" data-detail="1954년 출시된 300 SL은 세계 최초로 직접분사(Direct Injection) 가솔린 엔진과 걸윙(Gullwing) 도어를 적용한 전설적인 스포츠카입니다. 최고 속도 260km/h로 당시 세계에서 가장 빠른 양산차였습니다. 지금도 자동차 역사상 가장 아름다운 차 중 하나로 꼽히며, 메르세데스-벤츠 디자인 DNA의 원점으로 평가받습니다.">
+            <span class="iitem-year">1954</span> 300 SL 걸윙 — 자동차 역사의 아이콘
+          </div>
+          <div class="iitem clickable" data-car="benz" data-feature="S-Class 플래그십 전통 (1972)" data-detail="1972년 W116으로 시작된 S-Class는 '최고의 세단'이라는 전통을 이어오고 있습니다. 에어백, 안티락 브레이크(ABS), 전자식 안정화 장치(ESP) 등 수많은 자동차 안전 기술이 S-Class에서 세계 최초로 적용된 후 업계 표준이 되었습니다. S-Class는 메르세데스-벤츠의 기술력과 철학을 집약한 플래그십입니다.">
+            <span class="iitem-year">1972</span> S-Class — 럭셔리 세단의 기준
+          </div>
+          <div class="iitem clickable" data-car="benz" data-feature="AMG 인수 (1999)" data-detail="1967년 독립 튜닝 회사로 시작한 AMG를 1999년 다임러-벤츠가 완전 인수했습니다. AMG는 메르세데스-벤츠의 고성능 서브브랜드로서, 각 모델에 AMG 전용 엔진과 서스펜션, 외관을 적용해 퍼포먼스와 럭셔리를 결합한 차를 만들어냅니다. E63 AMG, C63 AMG 등이 대표적입니다.">
+            <span class="iitem-year">1999</span> AMG 완전 인수 — 고성능 서브브랜드
+          </div>
+          <div class="iitem clickable" data-car="benz" data-feature="EQ 전기차 라인업 (2019~)" data-detail="2019년 EQC를 시작으로 메르세데스-벤츠는 EQ 전기차 라인업을 구축했습니다. EQS(플래그십 세단), EQE(중형 세단), EQB(소형 SUV) 등 다양한 라인업을 갖추고 있습니다. 특히 EQS는 WLTP 기준 최대 780km 주행 가능한 프리미엄 전기 세단으로, BMW i7과 경쟁합니다. 2025년 글로벌 EV 판매 197,300대를 기록했습니다.">
+            <span class="iitem-year">2019~</span> EQ 전기차 — 럭셔리 EV의 새 기준
+          </div>
+        </div>
       </div>
-      <div class="perf-grid">
-        <div class="perf-item">
-          <div class="perf-header">
-            <span class="perf-name">최고 출력 <em>(hp)</em></span>
-            <span class="perf-tag equal-tag">동일</span>
-          </div>
-          <div class="perf-bar-group">
-            <div class="pbr benz-pbr">
-              <span class="pbr-brand">E 300</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="86"></div></div>
-              <span class="pbr-val">258 hp</span>
-            </div>
-            <div class="pbr bmw-pbr">
-              <span class="pbr-brand">530i</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="86"></div></div>
-              <span class="pbr-val">258 hp</span>
-            </div>
+      <!-- BMW -->
+      <div class="brand-col bmw-col">
+        <div class="brand-col-head">
+          <div class="brand-badge bmw-badge-bg">◎</div>
+          <div>
+            <div class="brand-col-label">BMW</div>
+            <div class="brand-col-founding">1916년 창립</div>
           </div>
         </div>
-        <div class="perf-item">
-          <div class="perf-header">
-            <span class="perf-name">최대 토크 <em>(kgm)</em></span>
-            <span class="perf-tag equal-tag">동일</span>
+        <div class="brand-motto">"Freude am Fahren" — 운전의 즐거움</div>
+        <div class="item-list">
+          <div class="iitem clickable" data-car="bmw" data-feature="항공기 엔진 제조사로 출발 (1916)" data-detail="BMW는 1916년 바이에른 항공기 엔진 제조사(Bayerische Flugzeugwerke)로 설립되었습니다. 1차 세계대전 당시 포커 D.VII 전투기에 탑재된 185마력 엔진을 생산했습니다. 1917년 바이에리셰 모토렌 베르케(Bayerische Motoren Werke)로 이름을 바꾸었고, BMW 로고의 파란색과 흰색은 바이에른 주의 색을 상징합니다.">
+            <span class="iitem-year">1916</span> 항공기 엔진 제조사로 창립
           </div>
-          <div class="perf-bar-group">
-            <div class="pbr benz-pbr">
-              <span class="pbr-brand">E 300</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="76"></div></div>
-              <span class="pbr-val">40.8 kgm</span>
-            </div>
-            <div class="pbr bmw-pbr">
-              <span class="pbr-brand">530i</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="76"></div></div>
-              <span class="pbr-val">40.8 kgm</span>
-            </div>
+          <div class="iitem clickable" data-car="bmw" data-feature="베르사유 조약 이후 전환 (1918)" data-detail="1918년 1차 세계대전 종전 후 베르사유 조약으로 항공기 엔진 생산이 금지되었습니다. BMW는 오토바이와 농기계 엔진으로 사업 방향을 전환했습니다. 1923년 R32 오토바이를 출시해 큰 성공을 거두었고, 1928년 첫 자동차 Dixi를 생산하며 자동차 메이커로 변신했습니다. 역경이 BMW의 다양화와 혁신의 씨앗이 된 셈입니다.">
+            <span class="iitem-year">1918</span> 전환점 — 오토바이·자동차로 다각화
           </div>
-        </div>
-        <div class="perf-item">
-          <div class="perf-header">
-            <span class="perf-name">0→100km/h <em>(초)</em></span>
-            <span class="perf-tag equal-tag">동일</span>
+          <div class="iitem clickable" data-car="bmw" data-feature="Neue Klasse로 파산 위기 탈출 (1962)" data-detail="1959년 BMW는 사실상 파산 직전이었습니다. 메르세데스-벤츠에 인수될 위기에 놓였지만, 1962년 출시된 'Neue Klasse(새로운 클래스)' 세단이 회사를 살렸습니다. 날렵하고 운전자 중심적인 설계로 큰 인기를 얻은 이 차는 현재까지 모든 BMW 세단의 원형이 되었습니다. 오늘날에도 BMW는 차세대 전기차 플랫폼에 'Neue Klasse'라는 이름을 사용하고 있습니다.">
+            <span class="iitem-year">1962</span> Neue Klasse — 파산 위기에서 부활
           </div>
-          <div class="perf-bar-group">
-            <div class="pbr benz-pbr">
-              <span class="pbr-brand">E 300</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="79"></div></div>
-              <span class="pbr-val">6.1 초</span>
-            </div>
-            <div class="pbr bmw-pbr">
-              <span class="pbr-brand">530i</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="79"></div></div>
-              <span class="pbr-val">6.1 초</span>
-            </div>
+          <div class="iitem clickable" data-car="bmw" data-feature="M 디비전 설립 (1972)" data-detail="1972년 BMW Motorsport GmbH(현 BMW M GmbH)가 설립되었습니다. 처음에는 레이싱용 차량 개발에 집중했지만, 1978년 M1 슈퍼카를 시작으로 양산차 고성능 버전을 만들기 시작했습니다. M3, M5, M8 등 'M' 모델은 BMW의 드라이빙 퍼포먼스 정체성을 상징하는 가장 순수한 표현입니다. M 디비전은 오늘날 연간 수만 대의 M 모델을 판매하는 고성능 서브브랜드로 성장했습니다.">
+            <span class="iitem-year">1972</span> BMW M 디비전 설립 — 퍼포먼스의 정수
           </div>
-        </div>
-        <div class="perf-item">
-          <div class="perf-header">
-            <span class="perf-name">복합 연비 <em>(km/L)</em></span>
-            <span class="perf-tag equal-tag">동일</span>
+          <div class="iitem clickable" data-car="bmw" data-feature="iDrive 인포테인먼트 혁신 (2001)" data-detail="2001년 BMW 7시리즈(E65)에 세계 최초로 iDrive 통합 컨트롤 시스템을 적용했습니다. 하나의 다이얼로 모든 차량 기능을 조작하는 혁신적인 개념이었습니다. 초기에는 복잡하다는 비판을 받았지만, 이후 지속적인 개선을 거쳐 iDrive 8, 파노라믹 iDrive로 진화했습니다. 이 시스템은 자동차 인포테인먼트의 패러다임을 바꾼 혁신으로 평가받습니다.">
+            <span class="iitem-year">2001</span> iDrive — 자동차 인터페이스 혁신
           </div>
-          <div class="perf-bar-group">
-            <div class="pbr benz-pbr">
-              <span class="pbr-brand">E 300</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="55"></div></div>
-              <span class="pbr-val">11.1 km/L</span>
-            </div>
-            <div class="pbr bmw-pbr">
-              <span class="pbr-brand">530i</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="55"></div></div>
-              <span class="pbr-val">11.1 km/L</span>
-            </div>
+          <div class="iitem clickable" data-car="bmw" data-feature="i 시리즈 전기차 (2013~)" data-detail="2013년 BMW는 전기차 전용 서브브랜드 'i'를 론칭하고 i3(전기 소형차)와 i8(플러그인 하이브리드 슈퍼카)를 출시했습니다. 탄소섬유 강화 플라스틱(CFRP) 차체를 양산차에 최초로 대규모 적용한 사례입니다. 현재 i5, i7, iX 등으로 라인업이 확장되었으며, 2025년 글로벌 전기차 판매 442,072대로 메르세데스 EQ(197,300대) 대비 2.2배 앞서고 있습니다.">
+            <span class="iitem-year">2013~</span> BMW i 시리즈 — EV 시장 선도
           </div>
-        </div>
-        <div class="perf-item">
-          <div class="perf-header">
-            <span class="perf-name">트렁크 용량 <em>(L)</em></span>
-            <span class="perf-tag benz-tag">벤츠 우세</span>
-          </div>
-          <div class="perf-bar-group">
-            <div class="pbr benz-pbr">
-              <span class="pbr-brand">E 300</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="85"></div></div>
-              <span class="pbr-val">540 L ★</span>
-            </div>
-            <div class="pbr bmw-pbr">
-              <span class="pbr-brand">530i</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="80"></div></div>
-              <span class="pbr-val">520 L</span>
-            </div>
-          </div>
-        </div>
-        <div class="perf-item">
-          <div class="perf-header">
-            <span class="perf-name">축거 <em>(mm · 뒷좌석 공간)</em></span>
-            <span class="perf-tag bmw-tag">BMW 우세</span>
-          </div>
-          <div class="perf-bar-group">
-            <div class="pbr benz-pbr">
-              <span class="pbr-brand">E 300</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="85"></div></div>
-              <span class="pbr-val">2,960 mm</span>
-            </div>
-            <div class="pbr bmw-pbr">
-              <span class="pbr-brand">530i</span>
-              <div class="pbr-track"><div class="pbr-fill" data-w="89"></div></div>
-              <span class="pbr-val">2,995 mm ★</span>
-            </div>
+          <div class="iitem clickable" data-car="bmw" data-feature="한국 수입차 1위 탈환 (2025)" data-detail="2025년 BMW는 한국 시장에서 77,127대를 판매해 10년 만에 메르세데스-벤츠(68,467대)를 제치고 수입차 1위를 탈환했습니다. BMW의 전년 대비 성장률은 +2.9%였으며, 특히 5시리즈와 3시리즈가 판매를 이끌었습니다. 3시리즈 320i M 퍼포먼스 파츠 에디션(6,490만원)과 M3 투어링(1억 4,600만원) 등 다양한 라인업이 인기를 끌었습니다.">
+            <span class="iitem-year">2025</span> 한국 수입차 1위 탈환
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ══ SLIDE 4: FEATURES (Interactive) ═════════════════ -->
-  <div class="slide slide-features" data-slide="4" data-label="기능">
-    <div class="slide-body">
-      <div class="sec-header sec-header-sm">
-        <span class="sec-label">FEATURES</span>
-        <h2>주요 기능 비교</h2>
-        <p>항목을 <strong>클릭</strong>하면 상세 설명이 표시됩니다</p>
-      </div>
-      <div class="feat-tabs">
-        <button class="ftab active" data-tab="exterior">외장 디자인</button>
-        <button class="ftab" data-tab="interior">실내 / 편의</button>
-        <button class="ftab" data-tab="tech">기술 / 인포테인먼트</button>
-        <button class="ftab" data-tab="safety">안전</button>
-      </div>
-      <div class="feat-panels">
-        <!-- EXTERIOR -->
-        <div class="feat-panel active" id="fpanel-exterior">
-          <div class="fcol-wrap">
-            <div class="fcol benz-fcol">
-              <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
-              <ul>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="디지털 라이트 & 어댑티브 상향등 어시스트" data-detail="84개 마이크로 픽셀 LED로 구성된 차세대 조명 시스템입니다. 전방 차량·보행자를 감지해 해당 부분만 빛을 줄이는 '적응형 상향등'으로 야간 안전성을 극대화합니다. 기존 LED 대비 훨씬 세밀한 빛 제어가 가능합니다.">디지털 라이트 & 어댑티브 상향등 어시스트 플러스</li>
-                <li class="fitem clickable" data-car="benz" data-feature="AMG 라인 익스테리어" data-detail="AMG 전용 프론트 범퍼, 사이드 스커트, 트렁크 스포일러로 스포티한 감성을 더합니다. 일반 E클래스와 확연히 다른 역동적 실루엣으로, AMG의 퍼포먼스 DNA를 외관에 담아냅니다.">AMG 라인 익스테리어</li>
-                <li class="fitem clickable" data-car="benz" data-feature='19" AMG 투톤 5트윈스포크 알로이 휠 (RTE)' data-detail='AMG 전용 투톤 19인치 5트윈스포크 경량 알루미늄 휠입니다. 런플랫 타이어(RTE) 적용으로 펑크 시에도 80km/h 속도로 최대 80km 주행이 가능해 스페어 타이어가 필요 없습니다.'>19" AMG 투톤 5트윈스포크 알로이 휠 (RTE)</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="발광 라디에이터 그릴" data-detail="그릴 내부에 LED 조명이 내장되어 야간에 별처럼 빛납니다. 주·야간 모두 강렬한 첫인상을 주는 AMG Line의 시그니처 디자인입니다. 정차 시 주변 빛에 반응해 자동으로 점등/소등됩니다.">발광 라디에이터 그릴</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="발광 도어실 패널" data-detail="승하차 시 도어 하단에 메르세데스-벤츠 로고와 함께 발광 조명이 켜집니다. 어두운 곳에서도 고급스러운 승차 경험을 제공하는 디테일이며, 탑승자에게 특별한 환영 인사를 전합니다.">발광 도어실 패널</li>
-                <li class="fitem clickable" data-car="benz" data-feature="파노라믹 선루프" data-detail="앞좌석부터 뒷좌석까지 이어지는 대형 유리 지붕입니다. 전동 틸트·슬라이드 방식으로 개방감과 채광을 극대화하며, UV·IR 차단 코팅으로 열 유입을 최소화합니다.">파노라믹 선루프</li>
-                <li class="fitem clickable" data-car="benz" data-feature="브랜드 프로젝션 로고" data-detail="도어를 열면 지면에 메르세데스-벤츠 로고가 빛으로 투영됩니다. 승차 전부터 프리미엄 경험을 제공하는 감성적인 디테일입니다.">브랜드 프로젝션 로고</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="프론트 액슬 대형 디스크 브레이크" data-detail="AMG Line 전용 대형 통풍 디스크 브레이크입니다. 일반 E클래스보다 제동 면적이 넓어 고속 및 반복 제동 시 열 방산 성능이 뛰어납니다.">프론트 액슬 대형 디스크 브레이크</li>
-              </ul>
-            </div>
-            <div class="fcol bmw-fcol">
-              <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
-              <ul>
-                <li class="fitem clickable" data-car="bmw" data-feature="어댑티브 LED 헤드라이트" data-detail="주행 환경에 따라 자동으로 빛의 방향과 강도를 조절하는 적응형 LED 조명입니다. 코너 진입 시 스티어링에 연동해 진행 방향으로 빛이 이동하며, 도심/고속도로/악천후 모드가 자동 전환됩니다.">어댑티브 LED 헤드라이트</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="M 하이글로스 쉐도우 라인 익스테리어" data-detail="외장 장식 요소(그릴 테두리, 사이드 미러, 창문 몰딩 등)를 매트 블랙 하이글로스로 마감한 M 전용 패키지입니다. 일반 크롬 마감보다 공격적이고 스포티한 인상을 주며, 블랙 계열 차색과 완벽하게 어울립니다.">M 하이글로스 쉐도우 라인 익스테리어</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature='20" 938M 바이컬러 젯 블랙 휠' data-detail='M Sport 전용 20인치 투톤 블랙 경량 알루미늄 휠입니다. 벤츠의 19인치 대비 1인치 큰 휠로 더 낮은 타이어 편평비를 적용해 코너링 응답성이 향상됩니다. 스포티한 외관을 극대화합니다.'>20" 938M 바이컬러 젯 블랙 휠</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="Iconic Glow 키드니 그릴 (발광)" data-detail="BMW 고유의 더블 키드니 그릴에 LED 발광 기능을 더했습니다. 야간에 그릴 테두리가 은은하게 빛나며 독보적인 존재감을 발휘합니다. BMW 아이덴티티인 키드니 그릴을 현대적으로 재해석한 디자인입니다.">Iconic Glow 키드니 그릴 (발광)</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="M Sport 브레이크" data-detail="M Sport 전용 브레이크 시스템으로 블루 캘리퍼가 적용됩니다. 일반 530i보다 제동력이 향상되었으며, 20인치 휠 사이로 보이는 블루 캘리퍼는 스포티한 디테일을 더합니다.">M Sport 브레이크</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="파노라마 선루프" data-detail="앞좌석과 뒷좌석을 아우르는 대형 파노라마 유리 지붕입니다. 전동 틸트·슬라이드 기능과 UV·IR 차단 코팅이 적용되어 개방감을 극대화하면서도 태양열 유입을 줄입니다.">파노라마 선루프</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="리어 스포일러" data-detail="트렁크 뒤쪽에 통합된 M Sport 전용 리어 스포일러입니다. 고속 주행 시 다운포스를 생성해 안정성을 높이고, 스포티한 후면 디자인을 완성합니다.">리어 스포일러</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="하이빔 어시스턴트" data-detail="대향차·선행차를 자동으로 감지해 하이빔과 로빔을 자동 전환합니다. 운전자가 별도 조작 없이도 항상 최적의 조명 환경에서 주행할 수 있습니다.">하이빔 어시스턴트</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- INTERIOR -->
-        <div class="feat-panel" id="fpanel-interior">
-          <div class="fcol-wrap">
-            <div class="fcol benz-fcol">
-              <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
-              <ul>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="나파가죽 다기능 스포츠 스티어링 휠 (열선)" data-detail="최상급 나파 가죽으로 감싼 AMG 스포츠형 스티어링 휠입니다. 열선 기능이 내장되어 겨울철에도 따뜻한 촉감을 제공합니다. 다기능 버튼이 통합되어 주행 중 각종 기능을 쉽게 조작할 수 있습니다.">나파가죽 다기능 스포츠 스티어링 휠 (열선)</li>
-                <li class="fitem clickable" data-car="benz" data-feature="블랙 피아노 라커 트림" data-detail="피아노처럼 광택이 나는 블랙 유광 인테리어 트림입니다. 빛 반사로 인테리어에 깊이와 고급감을 더하며, AMG Line 전용 사양으로 제공됩니다.">블랙 피아노 라커 트림</li>
-                <li class="fitem clickable" data-car="benz" data-feature="가죽 스포츠 시트 (221A)" data-detail="AMG 전용 스포츠 시트 패키지(221A)로, 측면 지지대가 강화된 버킷 형태입니다. 아티코 합성 가죽과 천연 가죽이 혼합된 소재로 마감되었습니다.">가죽 스포츠 시트 (221A)</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="액티브 엠비언트 라이트 (64색)" data-detail="실내 곳곳에 내장된 LED 무드 조명을 64가지 색상으로 자유롭게 설정할 수 있습니다. 주행 모드에 따라 자동으로 색상이 변하며, 음악 리듬에 맞춰 빛이 흔들리는 '뮤직 모드'도 지원합니다.">액티브 엠비언트 라이트 (64색)</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="부메스터 4D 서라운드 사운드" data-detail="독일 프리미엄 오디오 브랜드 부메스터가 설계한 최상급 4D 입체 음향 시스템입니다. 23개 스피커와 서브우퍼, 시트 진동 엑추에이터(4D)로 음악을 귀뿐만 아니라 온몸으로 느낄 수 있습니다. BMW 하만카돈 대비 월등히 높은 수준의 음질을 제공합니다.">부메스터 4D 서라운드 사운드 ★</li>
-                <li class="fitem clickable" data-car="benz" data-feature="앞좌석 메모리/열선/통풍 시트" data-detail="운전석과 조수석 모두 시트 위치 메모리 저장, 열선, 통풍(여름철 냉각) 기능을 갖춥니다. 2명의 운전 설정을 저장해 키를 꽂으면 자동으로 설정이 복원됩니다.">앞좌석 메모리/열선/통풍 시트</li>
-                <li class="fitem clickable" data-car="benz" data-feature="뒷좌석 열선" data-detail="뒷좌석 좌우에 시트 열선이 적용되어 겨울철 뒷좌석 승객도 따뜻한 착석 환경을 즐길 수 있습니다.">뒷좌석 열선</li>
-                <li class="fitem clickable" data-car="benz" data-feature="2존 에어컨 + 공기청정 패키지" data-detail="운전석과 조수석 2개 구역을 독립적으로 온도 조절합니다. 공기청정 패키지로 실내 공기질 센서, 활성탄 필터, 향균 기능이 포함됩니다.">2존 에어컨 + 공기청정 패키지</li>
-              </ul>
-            </div>
-            <div class="fcol bmw-fcol">
-              <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
-              <ul>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="M 레더 스티어링 휠 (열선)" data-detail="M Sport 전용 가죽 스티어링 휠로 하단이 평평한 'D-컷' 형태입니다. 열선 기능이 내장되어 겨울철에도 따뜻한 그립감을 제공합니다. M 로고가 수놓여져 스포티한 분위기를 더합니다.">M 레더 스티어링 휠 (열선)</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="M 알루미늄 룸비클 인테리어 트림" data-detail="섬세하게 가공된 알루미늄 소재의 M Sport 전용 인테리어 트림입니다. 메탈릭한 텍스처와 광택이 실내에 고급스럽고 역동적인 분위기를 더합니다.">M 알루미늄 룸비클 인테리어 트림</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="메리노 가죽 시트 (최상급 소재)" data-detail="BMW 라인업 최상급 천연 가죽 소재입니다. 일반 나파 가죽보다 더 얇고 부드러우며 섬세한 텍스처를 가집니다. 고급 패션 브랜드에서도 사용하는 소재로, 벤츠의 아티코 합성가죽보다 한 단계 높은 수준입니다.">메리노 가죽 시트 (최상급 소재)</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="앰비언트 라이트 (인터렉션 바 포함)" data-detail="실내 도어와 대시보드에 걸쳐 흐르는 LED 무드 조명입니다. 인터렉션 바는 센터콘솔을 따라 이어지는 발광 띠로, 터치하면 색상과 밝기를 조절할 수 있는 독특한 인터페이스입니다.">앰비언트 라이트 (인터렉션 바 포함)</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="하만카돈 하이파이 사운드" data-detail="하만카돈 브랜드의 16개 스피커 하이파이 시스템입니다. 일반 사운드 시스템 대비 훨씬 뛰어난 음질을 제공하지만, 부메스터 4D 대비는 한 단계 낮은 수준으로 평가됩니다.">하만카돈 하이파이 사운드</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="앞좌석 메모리/열선/통풍 시트" data-detail="운전석과 조수석 모두 시트 위치 메모리 저장, 열선, 통풍 기능을 갖춥니다. BMW ID(개인 설정 프로파일)와 연동되어 스마트폰 접근 시 자동으로 설정이 복원됩니다.">앞좌석 메모리/열선/통풍 시트</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="뒷좌석 열선" data-detail="뒷좌석 좌우 시트에 열선이 적용됩니다. 후방 센터 콘솔의 전용 버튼으로 뒷좌석 승객이 직접 조작할 수 있습니다.">뒷좌석 열선</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="4존 에어컨 (독립 온도 조절)" data-detail="앞좌석 좌우, 뒷좌석 좌우 총 4개 구역을 각자 원하는 온도로 완전 독립 설정할 수 있습니다. 동승자가 4명 모두 다른 온도를 설정할 수 있어 가족 여행이나 비즈니스 이동 시 모든 탑승자가 최적의 환경을 유지합니다. 벤츠의 2존 대비 확실한 우위입니다.">4존 에어컨 (독립 온도 조절) ★</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- TECH -->
-        <div class="feat-panel" id="fpanel-tech">
-          <div class="fcol-wrap">
-            <div class="fcol benz-fcol">
-              <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
-              <ul>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="MBUX 슈퍼스크린 (대형 통합 디스플레이)" data-detail="대시보드 전체를 가로지르는 와이드 OLED 통합 디스플레이입니다. 조수석에도 전용 엔터테인먼트 화면이 내장되어 운전 중 조수석 탑승자가 독립적으로 영상 시청이 가능합니다. 이 슬라이드에서 가장 차별화되는 기술로, BMW에는 없는 기능입니다.">MBUX 슈퍼스크린 (대형 통합 디스플레이) ★</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="증강현실 내비게이션 + HUD" data-detail="카메라로 촬영한 실제 도로 영상 위에 내비게이션 화살표를 직접 겹쳐 표시하는 AR 내비게이션입니다. 헤드업 디스플레이(HUD)와 연동되어 전방 도로에 시속, 방향, 속도 제한 정보가 투영됩니다. 복잡한 교차로에서도 직관적으로 길 안내를 받을 수 있습니다.">증강현실 내비게이션 + HUD</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="셀피/비디오 카메라 내장" data-detail="차량 실내 카메라가 내장되어 탑승자가 셀피 촬영이나 영상통화를 할 수 있습니다. MBUX 슈퍼스크린과 연동되어 영상통화 시 상대방 화면이 조수석 디스플레이에 표시됩니다.">셀피/비디오 카메라 내장</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="MBUX 엔터테인먼트 플러스" data-detail="차량 내에서 Zoom 화상회의, 유튜브, 게임 등 다양한 앱을 이용할 수 있는 확장 엔터테인먼트 시스템입니다. LTE 통신 모듈 내장으로 스마트폰 없이도 독립적으로 인터넷 접속이 가능합니다.">MBUX 엔터테인먼트 플러스 (줌 등)</li>
-                <li class="fitem clickable" data-car="benz" data-feature="360도 카메라 & 액티브 주차어시스트" data-detail="4개 카메라로 촬영한 영상을 조합해 차량을 위에서 내려다보는 버드아이뷰를 구현합니다. 액티브 주차어시스트는 주차 공간을 자동으로 탐색하고 스티어링을 자동 조작해 주차를 도와줍니다.">360도 카메라 & 액티브 주차어시스트</li>
-                <li class="fitem clickable" data-car="benz" data-feature="스마트폰 디지털 키 + 디지털 키 전달" data-detail="스마트폰을 차키 대신 사용할 수 있는 디지털 키 기능입니다. NFC 또는 블루투스로 잠금 해제 및 시동이 가능하며, 다른 스마트폰으로 디지털 키를 전송해 다른 사람이 차를 사용하게 할 수도 있습니다.">스마트폰 디지털 키 + 디지털 키 전달</li>
-                <li class="fitem clickable" data-car="benz" data-feature="무선 안드로이드 오토/애플 카플레이" data-detail="케이블 연결 없이 스마트폰을 차량 디스플레이와 무선으로 미러링합니다. 구글 맵, 유튜브 뮤직, 카카오내비 등 스마트폰 앱을 차량 화면에서 그대로 사용할 수 있습니다.">무선 안드로이드 오토/애플 카플레이</li>
-                <li class="fitem clickable" data-car="benz" data-feature="키레스 고 + 전동 트렁크 + 핸즈프리 액세스" data-detail="스마트 키를 가방에 넣은 채로 차에 접근하면 자동으로 잠금이 해제됩니다. 핸즈프리 트렁크는 트렁크 아래에 발을 한 번 차는 동작으로 열립니다. 양손에 짐을 든 상황에서 특히 편리합니다.">키레스 고 + 전동 트렁크 + 핸즈프리 액세스</li>
-              </ul>
-            </div>
-            <div class="fcol bmw-fcol">
-              <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
-              <ul>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="12.3" + 14.9" 듀얼 스크린 + HUD" data-detail='12.3인치 디지털 계기판과 14.9인치 터치스크린이 매끄럽게 이어진 커브드 디스플레이입니다. 헤드업 디스플레이(HUD)까지 더해 3중 화면 시스템을 구성합니다. 벤츠 MBUX 슈퍼스크린과 비교되는 BMW의 주요 인포테인먼트 시스템입니다.'>12.3" + 14.9" 듀얼 스크린 + HUD</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="BMW 라이브 콕핏 프로페셔널" data-detail="BMW 최신 통합 인포테인먼트 시스템입니다. 듀얼 커브드 스크린, 직관적인 iDrive 8 UI, 빠른 반응 속도, OTA(무선 소프트웨어 업데이트)를 지원합니다. 음성 인식 '헤이 BMW'로 대부분의 기능을 핸즈프리로 조작할 수 있습니다.">BMW 라이브 콕핏 프로페셔널</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="제스처 컨트롤" data-detail="대시보드 상단 카메라가 운전자의 손 동작을 인식합니다. 손을 원형으로 돌리면 볼륨 조절, 손가락을 터치스크린 방향으로 뻗으면 화면 전환, 집게손가락을 들면 전화 받기 등 다양한 동작을 지원합니다. 운전 중 터치스크린 대신 더 안전하게 기능을 조작할 수 있습니다.">제스처 컨트롤</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="리모트 엔진 스타트 (원격 시동)" data-detail="BMW 앱 또는 BMW 스마트키 리모컨으로 차량에서 최대 400m 거리에서 원격 시동이 가능합니다. 겨울철 미리 실내를 따뜻하게 하거나 여름철 에어컨을 미리 가동하는 데 특히 유용합니다.">리모트 엔진 스타트 (원격 시동)</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="서라운드 뷰 카메라 + 주차 보조" data-detail="4개 카메라로 차량 주변 360도를 버드아이뷰로 보여줍니다. 주차 보조 시스템과 연동되어 주차 공간을 자동 탐색하고, 후진 시 조향 가이드라인을 자동으로 표시합니다.">서라운드 뷰 카메라 + 주차 보조</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="BMW 디지털 키 플러스" data-detail="스마트폰을 차키로 사용하는 기능의 BMW 버전입니다. UWB(초광대역) 기술을 사용해 주머니나 가방에 스마트폰을 넣은 상태에서도 정확한 위치를 인식해 잠금 해제가 가능합니다. 애플 워치도 지원합니다.">BMW 디지털 키 플러스</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="스마트폰 무선충전" data-detail="Qi 표준 무선충전 패드가 센터콘솔에 내장됩니다. 삼성, 아이폰 등 대부분의 스마트폰을 케이블 없이 충전할 수 있습니다.">스마트폰 무선충전</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="BSI 프리미엄 (5년/10만km 무상유지)" data-detail="구입 후 5년 또는 주행거리 10만km까지 엔진오일 교환, 일반 점검, 소모품 교환을 모두 무상으로 제공합니다. 실질적으로 연간 30-50만원의 유지비를 절감할 수 있어, 5년 기준 총 150-250만원의 이익입니다. BMW 구매의 핵심 혜택으로, 벤츠에는 이에 해당하는 프로그램이 없습니다.">BSI 프리미엄 (5년/10만km 무상유지) ★</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- SAFETY -->
-        <div class="feat-panel" id="fpanel-safety">
-          <div class="fcol-wrap">
-            <div class="fcol benz-fcol">
-              <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
-              <ul>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="에어백 10개" data-detail="운전석·동반석 정면, 무릎, 앞·뒤 사이드, 앞·뒤 커튼, 센터 에어백 등 총 10개의 에어백이 탑승자를 전방위로 감쌉니다. BMW 대비 더 많은 수의 에어백으로 측면 충돌, 후방 충돌, 보행자 충돌 시 추가적인 보호를 제공합니다.">에어백 10개 ★</li>
-                <li class="fitem clickable" data-car="benz" data-feature="P20 드라이빙 어시스턴트 패키지 플러스" data-detail="메르세데스-벤츠의 종합 주행 보조 패키지입니다. 액티브 조향 어시스턴트, 차선 유지, 교통 표지판 인식, 고속도로 주행 보조 기능을 포함하며, Level 2 반자율 주행을 지원합니다.">P20 드라이빙 어시스턴트 패키지 플러스</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="프리-세이프 시스템 (총 4종)" data-detail="충돌이 예측되는 순간 충돌 이전에 미리 대응하는 선제적 안전 시스템입니다. ① 안전벨트 자동 긴장 ② 창문 자동 닫기 ③ 서스펜션 높이 조정 (충격 방향에 따른 차체 기울기 변경) ④ 사이드 에어백 선배치 등 4가지 조치를 취해 충돌 충격을 최소화합니다.">프리-세이프 시스템 (총 4종)</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="충돌회피 조향어시스트" data-detail="전방 충돌이 불가피한 상황에서 자동 브레이크와 함께 스티어링을 자동 조작해 장애물을 피하거나 충돌 각도를 줄입니다. 단순 자동 제동보다 한 단계 높은 수준의 충돌 회피 시스템입니다.">충돌회피 조향어시스트</li>
-                <li class="fitem clickable" data-car="benz" data-feature="액티브 사각지대 어시스트" data-detail="사이드 미러 사각지대에 차량이 접근하면 경고를 줍니다. 충돌 위험이 커지면 스티어링 휠에 진동을 주거나 자동으로 조향을 보정해 충돌을 방지합니다.">액티브 사각지대 어시스트</li>
-                <li class="fitem clickable" data-car="benz" data-feature="액티브 스티어링 어시스트" data-detail="차선 중앙을 유지하도록 스티어링을 자동으로 미세 조정합니다. 고속도로에서 핸즈프리(조건부) 주행이 가능한 Level 2 반자율 주행을 지원합니다.">액티브 스티어링 어시스트</li>
-                <li class="fitem clickable" data-car="benz" data-feature="Active Bonnet (보행자 보호)" data-detail="보행자와의 충돌이 감지되면 후드(본넷)가 0.1초 내에 위로 솟아오릅니다. 후드와 엔진 사이의 공간이 생겨 보행자의 머리가 딱딱한 엔진 부품과 부딪히는 충격을 흡수합니다.">Active Bonnet (보행자 보호)</li>
-                <li class="fitem advantage clickable" data-car="benz" data-feature="경로기반 속도조절" data-detail="내비게이션 경로 데이터를 활용해 전방 커브, 로터리, 속도 제한 구역을 미리 인식하고 최적 속도로 자동 감속합니다. 운전자가 미처 보지 못한 위험 구간에 미리 대응합니다.">경로기반 속도조절</li>
-              </ul>
-            </div>
-            <div class="fcol bmw-fcol">
-              <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
-              <ul>
-                <li class="fitem clickable" data-car="bmw" data-feature="에어백 다수 (커튼형 포함)" data-detail="전면, 사이드, 커튼 에어백 등 다수의 에어백이 탑승자를 보호합니다. 구체적인 수량은 공개되지 않았으나 벤츠의 10개보다는 적은 것으로 알려져 있습니다.">에어백 다수 (커튼형 포함)</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="드라이빙 어시스턴트 프로페셔널" data-detail="BMW의 종합 주행 보조 시스템입니다. 고속도로 주행 보조(핸즈프리 조건부 지원), 자동 차선 변경 어시스턴트, 교차로 경고, 후방 충돌 경고 등 최신 ADAS 기능을 종합 제공합니다. 벤츠의 P20 패키지와 동급 수준입니다.">드라이빙 어시스턴트 프로페셔널</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="파킹 어시스턴트 플러스" data-detail="주차 공간을 자동 탐색하고 스티어링, 변속, 가속, 제동을 모두 자동으로 제어해 완전 자동 주차를 지원합니다. 리버스 어시스턴트는 최대 50m까지 후진 경로를 기억해 좁은 골목에서 자동으로 후진할 수 있습니다.">파킹 어시스턴트 플러스</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="액티브 크루즈 컨트롤 (Stop&Go)" data-detail="앞차와 일정 거리를 자동으로 유지하며 속도를 조절합니다. Stop&Go 기능으로 교통 정체 시 완전 정지까지 자동 대응하고, 차가 다시 움직이면 자동으로 추종 주행을 재개합니다.">액티브 크루즈 컨트롤 (Stop&Go)</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="스티어링 & 차선유지 어시스트" data-detail="차선 이탈이 감지되면 스티어링에 진동을 주어 경고하고, 자동으로 스티어링을 보정해 차선을 유지합니다. 고속도로에서 Level 2 반자율 주행을 지원합니다.">스티어링 & 차선유지 어시스트</li>
-                <li class="fitem clickable" data-car="bmw" data-feature="차선변경 & 사각지대 경고" data-detail="사이드 미러 사각지대에 차량이 감지되면 미러에 경고 표시가 나타납니다. 사각지대 차량이 있는 상황에서 방향지시등을 켜면 경고음과 함께 스티어링 보정이 이루어집니다.">차선변경 & 사각지대 경고</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="후방 충돌 경고" data-detail="뒤에서 빠르게 접근하는 차량이 감지되면 경고를 발령합니다. 충돌이 임박하면 비상등을 점멸시켜 후방 차량에 위험을 알리고, 충돌 전 안전벨트를 긴장시킵니다.">후방 충돌 경고</li>
-                <li class="fitem advantage clickable" data-car="bmw" data-feature="액티브 프로텍션" data-detail="충돌이 감지되기 직전 안전벨트 자동 긴장, 창문 자동 닫기, 비상등 자동 점등, 시트 위치 자동 조정을 수행합니다. 벤츠의 프리-세이프와 유사한 충돌 전 선제적 안전 대응 시스템입니다.">액티브 프로텍션</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- ══ SLIDE 3: 디자인 비교 ══ -->
+<div class="slide slide-features" data-slide="3" data-label="디자인">
+  <div class="slide-body">
+    <div class="sec-header sec-header-sm">
+      <span class="sec-label">DESIGN PHILOSOPHY</span>
+      <h2>디자인 비교</h2>
+      <p>항목을 <strong>클릭</strong>하면 상세 설명이 표시됩니다</p>
     </div>
-    <!-- Feature Detail Panel — in-flow, pushes list up when open -->
-    <div id="featureDetail" class="feature-detail">
-      <div class="fd-inner">
-        <button class="fd-close" id="fdClose">✕</button>
-        <div class="fd-car-badge" id="fdCarBadge"></div>
-        <h3 class="fd-title" id="fdTitle"></h3>
-        <p class="fd-desc" id="fdDesc"></p>
+    <div class="design-banner">
+      <img src="images/design.png" alt="디자인 철학 비교" />
+    </div>
+    <div class="feat-tabs">
+      <button class="ftab active" data-tab="design-ext">외장 디자인 DNA</button>
+      <button class="ftab" data-tab="design-int">인테리어 철학</button>
+      <button class="ftab" data-tab="design-3d">3D 인터랙티브 뷰어</button>
+    </div>
+    <div class="feat-panels">
+      <!-- 외장 -->
+      <div class="feat-panel active" id="fpanel-design-ext">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> Mercedes-Benz — Sensual Purity</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="Sensual Purity 디자인 언어" data-detail="메르세데스-벤츠의 공식 디자인 철학입니다. '감성(Sensual)'과 '순수함(Purity)'의 결합으로, 감성적이고 유기적인 곡선에 기술적 명료함을 더한 것입니다. 군더더기 없는 라인으로 차체의 본질적인 아름다움을 극대화하면서, 동시에 자동차가 살아 숨쉬는 생명체처럼 느껴지도록 디자인합니다. 1920년대 바우하우스 운동의 영향을 받아 예술과 기능의 결합을 추구합니다.">Sensual Purity — 감성과 순수함의 결합</li>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="세 꼭짓점 별(Three-Pointed Star) 엠블럼" data-detail="세 꼭짓점 별은 고틀리프 다임러의 아들들이 아버지의 꿈을 상징하기 위해 만들었습니다. 세 꼭짓점은 '육지, 해상, 항공'의 세 영역을 지배하겠다는 다임러의 포부를 의미합니다. 1909년 상표 등록 이후 100년이 넘는 세월 동안 럭셔리와 탁월함의 상징으로 자리잡았습니다. 현재는 그릴 중앙에 크게 배치되어 강한 존재감을 발휘합니다.">세 꼭짓점 별 엠블럼 — 100년의 역사</li>
+              <li class="fitem clickable" data-car="benz" data-feature="파나메리카나 그릴과 패밀리룩" data-detail="1952년 300 SL 레이싱카에서 시작된 파나메리카나(Panamericana) 그릴은 수직 루버 패턴이 특징입니다. 현재 AMG 모델에 주로 사용되며, 공기역학적 기능과 스포티한 시각적 효과를 동시에 제공합니다. 반면 일반 E·S·C 클래스는 크롬 라디에이터 그릴로 우아함을 강조합니다. 모델별로 그릴 디자인이 달라 고객이 원하는 이미지를 선택할 수 있습니다.">파나메리카나 그릴 — AMG 스포티 전통</li>
+              <li class="fitem clickable" data-car="benz" data-feature="E-Class W214 — 새로운 럭셔리의 정의" data-detail="2023년 출시된 현행 E-Class(W214)는 메르세데스-벤츠 역사상 가장 기술적으로 진보된 E-Class입니다. 외관은 더 날카롭고 역동적으로 진화했으며, 전면부에는 대형 그릴과 슬림한 LED 헤드라이트가 적용됩니다. 특히 테일라이트는 '3D 별 패턴'으로 야간에 독특한 존재감을 발휘합니다. 내부에는 MBUX 슈퍼스크린이 대시보드를 가득 채우며 미래적인 분위기를 연출합니다.">E-Class W214 — 현행 럭셔리 세단의 정점</li>
+              <li class="fitem clickable" data-car="benz" data-feature="S-Class — 미래 기술의 선행 적용" data-detail="S-Class는 메르세데스-벤츠의 기술 최전선입니다. 에어백, ABS, ESP 등 지금은 당연한 기술들이 모두 S-Class에서 먼저 적용된 후 하위 모델로 확산되었습니다. 현행 S-Class는 에어매틱 서스펜션, 후륜 조향, OLED 테일라이트, 4D 부메스터 사운드 시스템을 탑재합니다. 크기와 가격을 초월한 기술의 집약체입니다.">S-Class — 미래 기술의 첫 적용지</li>
+              <li class="fitem clickable" data-car="benz" data-feature="AMG 에어로 패키지" data-detail="AMG 라인 혹은 순정 AMG 모델에는 전용 에어로다이나믹 패키지가 적용됩니다. 전면 스플리터, 사이드 스커트, 후면 디퓨저, 루프 스포일러가 포함됩니다. 이들은 단순한 외관 장식이 아니라 실제로 공기저항을 줄이고 다운포스를 생성해 고속 안정성을 높입니다. 디자인과 기능이 완벽하게 결합된 AMG만의 특징입니다.">AMG 에어로다이나믹 패키지</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> BMW — Neue Klasse Design</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="Neue Klasse — 새로운 BMW 디자인 방향" data-detail="2025년부터 BMW가 채택한 새로운 디자인 방향입니다. 수석 디자이너 에이드리안 반 후이동크는 '세상이 점점 시끄러워지기 때문에 우리는 평화와 고요함을 가져온다'고 설명했습니다. 이전 세대보다 간결하고 자신감 있는 형태로, 1960년대 Neue Klasse 세단의 깔끔한 비율로 돌아가는 것이 핵심입니다. 전기차 플랫폼에서 시작되는 이 변화는 향후 모든 BMW 모델에 적용됩니다.">Neue Klasse — 간결함으로의 귀환</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="키드니 그릴의 진화 (1933~2025)" data-detail="BMW를 상징하는 더블 키드니 그릴은 1933년부터 이어온 전통입니다. 초기엔 실제 공기 흡입구였지만, 현재는 레이더·카메라 등 첨단 센서를 내장한 하이테크 디자인 요소로 진화했습니다. Neue Klasse에서는 '피지털(Phygital)' 개념으로 LED 조명이 내장되어 차에 다가가면 빛이 켜집니다. 과거엔 과도하게 커진다는 비판도 있었지만, 신형에선 크기를 줄이고 세로 방향으로 입체감을 살렸습니다.">키드니 그릴 — 1933년부터 이어진 아이콘</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="상어 코(Shark Nose) 보닛" data-detail="BMW 특유의 앞부분이 내려가는 '상어 코' 형상은 브랜드를 대표하는 디자인 DNA입니다. 이 형태는 공기역학적으로도 우수하며, 차 앞면이 날카롭게 떨어지는 모습은 빠르게 달리고 싶은 욕구를 자극합니다. 고성능 M 모델에서 이 형태가 가장 극적으로 표현됩니다.">상어 코(Shark Nose) — BMW의 시각적 서명</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="호프마이스터 킨크 (Hofmeister Kink)" data-detail="BMW의 C필러(뒷 창문 기둥) 하단이 앞쪽을 향해 꺾이는 독특한 라인입니다. 1961년 빌헬름 호프마이스터가 '새로운 클래스' 세단에 처음 적용한 이후 60년 이상 모든 BMW에 이어져오는 전통입니다. 이 킨크는 단순한 장식이 아니라 뒷좌석 탑승자의 시야를 가리지 않으면서도 구조적 강성을 높이는 기능적 요소이기도 합니다.">호프마이스터 킨크 — 60년 전통의 DNA</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="5-Series G60 — 새 BMW의 첫 표현" data-detail="2023년 출시된 현행 5시리즈(G60)는 Neue Klasse 방향을 처음으로 선보인 모델입니다. 이전 세대보다 전장이 커졌고(5,060mm), 더 날카로운 헤드라이트와 슬림한 리어라이트가 적용됩니다. 전기차 i5와 완전히 동일한 외관을 공유하는 최초의 BMW로, 전동화 전환을 상징합니다. 내부에는 새로운 커브드 듀얼 스크린과 인터랙션 바가 적용되었습니다.">5-Series G60 — Neue Klasse의 첫 선언</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="M Sport 에어로다이나믹 패키지" data-detail="M Sport 패키지는 BMW의 스포티 트림으로, 전용 범퍼, 사이드 스커트, 리어 스포일러, M 로고가 박힌 스티어링 휠, M 브레이크가 포함됩니다. 풀 M 모델과 달리 M Sport는 엔진은 표준 사양이지만 서스펜션과 외관을 스포티하게 업그레이드합니다. 특히 섀도우 라인 패키지(블랙 하이글로스 외장 부품)와 결합하면 공격적인 인상을 연출합니다.">M Sport 패키지 — 퍼포먼스 감성</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 인테리어 -->
+      <div class="feat-panel" id="fpanel-design-int">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> Mercedes-Benz 인테리어</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="MBUX 슈퍼스크린 — 미래형 대시보드" data-detail="대시보드 전체를 가로지르는 초대형 와이드 OLED 디스플레이입니다. 운전석 계기판(12.3인치)부터 조수석 전용 엔터테인먼트 스크린(12.3인치)까지 하나의 유리 패널로 연결됩니다. 조수석에서는 운전자가 볼 수 없도록 프라이버시 코팅이 적용된 독립 화면이 제공되어 영상 시청, 인터넷 브라우징이 가능합니다. 자동차 실내 디자인의 새로운 기준을 제시했습니다.">MBUX 슈퍼스크린 — 대시보드 혁명</li>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="부메스터 4D 서라운드 사운드" data-detail="독일 명품 오디오 브랜드 부메스터와 협업한 최상급 음향 시스템입니다. 23개 스피커 + 서브우퍼가 탑재되며, '4D' 기능은 시트 내 진동 액추에이터로 음악의 저음을 온몸으로 느낄 수 있게 합니다. 콘서트홀 음향을 차 안에서 재현한다는 컨셉으로, 클래식부터 EDM까지 모든 장르에서 탁월한 성능을 발휘합니다. BMW의 하만카돈(16스피커) 대비 확연히 상위 사양입니다.">부메스터 4D — 23개 스피커 + 시트 진동</li>
+              <li class="fitem clickable" data-car="benz" data-feature="나파/아티코 가죽과 AMG 스포츠 시트" data-detail="기본 모델에는 아티코(Artico) 합성 가죽, 상위 트림에는 나파(Nappa) 천연 가죽이 적용됩니다. AMG 스포츠 시트는 측면 지지대가 강화된 버킷 형태로 코너링 시 몸을 잡아주는 기능을 합니다. 통풍·열선·메모리 기능이 기본 포함되며, 마사지 기능도 선택 가능합니다. 시트의 촉감과 쿠션감은 메르세데스-벤츠의 오랜 강점 중 하나입니다.">나파 가죽 + AMG 스포츠 시트</li>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="액티브 앰비언트 라이트 (64색)" data-detail="실내 곳곳에 내장된 LED 무드 조명을 64가지 색상으로 자유 설정합니다. 주행 모드 변경 시 색상이 자동으로 바뀌고(Sport→붉은색, Comfort→따뜻한 흰색), 음악 리듬에 맞춰 빛이 흔들리는 '뮤직 모드'도 지원합니다. 단순한 장식을 넘어 탑승자의 감성과 분위기를 능동적으로 조절하는 '무드 매니지먼트' 도구입니다.">액티브 앰비언트 라이트 64색</li>
+              <li class="fitem clickable" data-car="benz" data-feature="2·4존 에어컨 + 공기청정 패키지" data-detail="기본 2존(운전석/조수석) 독립 온도 조절이 제공되며, 상위 트림에서는 4존(뒷좌석 좌우 포함)까지 지원합니다. 공기청정 패키지는 실내 공기질 센서, 활성탄 필터, 향균 코팅, 향 분사 기능이 포함됩니다. '허브 앤 머스크' 등 메르세데스-벤츠 전용 향을 고를 수 있어 후각으로도 럭셔리를 경험할 수 있습니다.">2·4존 에어컨 + 향기 공기청정</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> BMW 인테리어</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="커브드 듀얼 스크린 — iDrive 8" data-detail="12.3인치 디지털 계기판과 14.9인치 터치스크린이 하나의 곡면 유리 패널 안에 매끄럽게 연결된 혁신적 디자인입니다. HUD(헤드업 디스플레이)까지 더하면 3중 화면 시스템이 됩니다. iDrive 8의 UI는 이전 세대보다 훨씬 직관적이며, 'Hey BMW' 음성 명령으로 대부분의 기능을 핸즈프리로 조작할 수 있습니다. 응답 속도가 빠르고 OTA(무선 소프트웨어 업데이트)를 지원합니다.">커브드 듀얼 스크린 + iDrive 8</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="메리노 가죽 — BMW 최상급 소재" data-detail="메리노(Merino) 양의 천연 가죽으로, BMW 라인업에서 사용하는 가장 고급 가죽 소재입니다. 일반 나파 가죽보다 더 얇고 부드러우며, 고급 패션 브랜드에서도 사용하는 소재입니다. 메르세데스-벤츠의 아티코 합성 가죽보다 확실히 상위 소재이며, 나파 가죽과 비교해도 촉감이 더 섬세합니다. 전통적인 독일 공예 품질의 상징입니다.">메리노 가죽 — 프리미엄 내장재</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="4존 에어컨 — 탑승자 전원 독립 제어" data-detail="운전석·조수석·뒷좌석 좌·우 총 4개 구역을 각자 완전히 독립적으로 온도 조절합니다. 4명이 모두 다른 온도를 설정할 수 있어 가족 여행이나 비즈니스 이동 시 모든 탑승자가 최적의 환경을 누릴 수 있습니다. 메르세데스-벤츠 E-Class의 기본 2존 대비 확실한 편의성 우위입니다.">4존 에어컨 — 개인별 완전 독립 제어</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="인터랙션 바 앰비언트 라이트" data-detail="센터 콘솔과 도어 패널을 따라 이어지는 발광 띠가 단순한 무드 조명을 넘어 터치 인터페이스 역할을 합니다. 인터랙션 바를 터치하면 색상과 밝기를 조절할 수 있는 독특한 UX를 제공합니다. 애플의 '다이나믹 아일랜드'처럼 상황에 따라 정보를 표시하거나 알림을 시각화하는 기능도 있습니다.">인터랙션 바 — 빛으로 만드는 인터페이스</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="M 알루미늄 인테리어 트림" data-detail="M Sport 전용 알루미늄 소재의 인테리어 트림으로, 섬세하게 가공된 헤어라인 텍스처가 실내에 스포티하고 고급스러운 분위기를 더합니다. 기어 레버 주변, 도어 패널, 대시보드에 배치되어 운전 집중적인 환경을 구성합니다. 탄소섬유(Carbon Fiber) 트림 옵션도 제공됩니다.">M 알루미늄/카본 인테리어 트림</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 3D 뷰어 -->
+      <div class="feat-panel" id="fpanel-design-3d">
+        <div class="viewer-wrap" style="height:100%;">
+          <div class="viewer-half viewer-benz">
+            <iframe class="viewer-frame" title="Mercedes-Benz E-Class W214"
+              src="https://sketchfab.com/models/471ae365d79c488399ec04ca2c5bc51b/embed?autostart=1&ui_infos=0&ui_stop=0&autospin=0&dnt=1&ui_hint=0"
+              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen frameborder="0"></iframe>
+            <div class="viewer-caption viewer-benz-caption">
+              <span class="viewer-brand-dot">✦</span>
+              <span class="viewer-car-name">E-Class W214</span>
+              <span class="viewer-brand-label">Mercedes-Benz · 예시 모델</span>
+            </div>
+            <div class="viewer-glow benz-glow"></div>
+          </div>
+          <div class="viewer-sep"></div>
+          <div class="viewer-half viewer-bmw">
+            <iframe class="viewer-frame" title="BMW 5-Series G60"
+              src="https://sketchfab.com/models/ee328c2302494193a05cb4949b17ae55/embed?autostart=1&ui_infos=0&ui_stop=0&autospin=0&dnt=1&ui_hint=0"
+              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen frameborder="0"></iframe>
+            <div class="viewer-caption viewer-bmw-caption">
+              <span class="viewer-brand-dot">◎</span>
+              <span class="viewer-car-name">5-Series G60</span>
+              <span class="viewer-brand-label">BMW · 예시 모델</span>
+            </div>
+            <div class="viewer-glow bmw-glow"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div id="featureDetail" class="feature-detail">
+    <div class="fd-inner">
+      <button class="fd-close" id="fdClose">✕</button>
+      <div class="fd-car-badge" id="fdCarBadge"></div>
+      <h3 class="fd-title" id="fdTitle"></h3>
+      <p class="fd-desc" id="fdDesc"></p>
+    </div>
+  </div>
+</div>
 
-  <!-- ══ SLIDE 5: SPECS ═══════════════════════════════════ -->
-  <div class="slide slide-scrollable" data-slide="5" data-label="제원">
-    <div class="slide-body-scroll">
-      <div class="sec-header">
-        <span class="sec-label">SPECIFICATIONS</span>
-        <h2>상세 제원 비교표</h2>
+<!-- ══ SLIDE 4: 성능 & 주행감 ══ -->
+<div class="slide slide-scrollable" data-slide="4" data-label="성능" data-animate="perf">
+  <div class="slide-body-scroll">
+    <div class="sec-header">
+      <span class="sec-label">PERFORMANCE</span>
+      <h2>성능 &amp; 주행감</h2>
+      <p>항목을 <strong>클릭</strong>하면 상세 설명이 표시됩니다</p>
+    </div>
+    <div class="img-banner-sm">
+      <img src="images/performance.png" alt="성능 비교" />
+    </div>
+    <!-- 세그먼트 바 비교 -->
+    <div class="perf-section-title">세그먼트별 최고 출력 비교 (마력)</div>
+    <div class="perf-grid">
+      <div class="perf-item">
+        <div class="perf-header"><span class="perf-name">컴팩트 세단 <em>C300 vs 320i</em></span><span class="perf-tag equal-tag">동일</span></div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr"><span class="pbr-brand">C 300</span><div class="pbr-track"><div class="pbr-fill" data-w="43"></div></div><span class="pbr-val">258 hp</span></div>
+          <div class="pbr bmw-pbr"><span class="pbr-brand">320i</span><div class="pbr-track"><div class="pbr-fill" data-w="43"></div></div><span class="pbr-val">258 hp</span></div>
+        </div>
       </div>
-      <div class="spec-scroll">
-        <table class="spec-table">
-          <thead>
-            <tr>
-              <th class="spec-cat-head">항목</th>
-              <th class="benz-head"><span>Mercedes-Benz</span><br/><small>E 300 4MATIC AMG Line</small></th>
-              <th class="bmw-head"><span>BMW</span><br/><small>530i M Sport xDrive P1</small></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="group-row"><td colspan="3">기본 정보</td></tr>
-            <tr><td>가격</td><td>9,770만원</td><td class="bmw-win">8,900만원 ★</td></tr>
-            <tr><td>차량 코드</td><td>W214</td><td>G60</td></tr>
-            <tr><td>변속기</td><td>9G-Tronic (9단)</td><td>스텝트로닉 스포츠 (8단)</td></tr>
-            <tr><td>구동 방식</td><td>4MATIC (사륜)</td><td>xDrive (사륜)</td></tr>
-            <tr class="group-row"><td colspan="3">엔진 & 성능</td></tr>
-            <tr><td>엔진</td><td>M254, 직렬4기통 Mild Hybrid</td><td>B48, 직렬4기통 48V Mild Hybrid</td></tr>
-            <tr><td>배기량</td><td>1,999 cc</td><td>1,998 cc</td></tr>
-            <tr><td>최고 출력</td><td>258 hp / 5,800 rpm</td><td>258 hp / 4,600–6,500 rpm</td></tr>
-            <tr><td>최대 토크</td><td>40.8 kgm / 2,000–3,200 rpm</td><td>40.8 kgm / 1,600–4,500 rpm</td></tr>
-            <tr><td>0→100km/h</td><td>6.1 초</td><td>6.1 초</td></tr>
-            <tr><td>최고 속도</td><td>250 km/h</td><td>250 km/h</td></tr>
-            <tr><td>복합 연비</td><td>11.1 km/L (4등급)</td><td>11.1 km/L (4등급)</td></tr>
-            <tr><td>연료 탱크</td><td>66 L</td><td>60 L</td></tr>
-            <tr class="group-row"><td colspan="3">차체 & 크기</td></tr>
-            <tr><td>전장</td><td>4,955 mm</td><td class="bmw-win">5,060 mm ★</td></tr>
-            <tr><td>전폭</td><td>1,880 mm</td><td class="bmw-win">1,900 mm ★</td></tr>
-            <tr><td>전고</td><td>1,475 mm</td><td class="bmw-win">1,515 mm ★</td></tr>
-            <tr><td>축거 (뒷좌석)</td><td>2,960 mm</td><td class="bmw-win">2,995 mm ★</td></tr>
-            <tr><td>공차 중량</td><td>1,905 kg</td><td>1,905 kg</td></tr>
-            <tr><td>트렁크 용량</td><td class="benz-win">540 L ★</td><td>520 L</td></tr>
-            <tr><td>타이어 (전/후)</td><td>245/45 R19 / 275/40 R19</td><td class="bmw-win">245/40 R20 / 275/35 R20 ★</td></tr>
-            <tr class="group-row"><td colspan="3">인포테인먼트 & 편의</td></tr>
-            <tr><td>디스플레이</td><td class="benz-win">MBUX 슈퍼스크린 + HUD ★</td><td>12.3" + 14.9" 듀얼 + HUD</td></tr>
-            <tr><td>사운드 시스템</td><td class="benz-win">부메스터 4D 서라운드 ★</td><td>하만카돈 하이파이</td></tr>
-            <tr><td>에어컨</td><td>2존</td><td class="bmw-win">4존 독립 ★</td></tr>
-            <tr><td>시트 소재</td><td>아티코 가죽</td><td class="bmw-win">메리노 가죽 (최상급) ★</td></tr>
-            <tr><td>헤드라이트</td><td class="benz-win">디지털 라이트 ★</td><td>어댑티브 LED</td></tr>
-            <tr><td>에어백</td><td class="benz-win">10개 ★</td><td>다수 (커튼형 포함)</td></tr>
-            <tr><td>BSI 유지관리</td><td>—</td><td class="bmw-win">5년 / 10만km ★</td></tr>
-          </tbody>
-        </table>
+      <div class="perf-item">
+        <div class="perf-header"><span class="perf-name">중형 세단 <em>E300 vs 530i</em></span><span class="perf-tag equal-tag">동일</span></div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr"><span class="pbr-brand">E 300</span><div class="pbr-track"><div class="pbr-fill" data-w="43"></div></div><span class="pbr-val">258 hp</span></div>
+          <div class="pbr bmw-pbr"><span class="pbr-brand">530i</span><div class="pbr-track"><div class="pbr-fill" data-w="43"></div></div><span class="pbr-val">258 hp</span></div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-header"><span class="perf-name">고성능 버전 <em>E63 S vs M5</em></span><span class="perf-tag bmw-tag">BMW 우세</span></div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr"><span class="pbr-brand">E63 S</span><div class="pbr-track"><div class="pbr-fill" data-w="98"></div></div><span class="pbr-val">612 hp</span></div>
+          <div class="pbr bmw-pbr"><span class="pbr-brand">M5</span><div class="pbr-track"><div class="pbr-fill" data-w="100"></div></div><span class="pbr-val">625 hp ★</span></div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-header"><span class="perf-name">플래그십 <em>S580 vs 750i</em></span><span class="perf-tag benz-tag">벤츠 우세</span></div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr"><span class="pbr-brand">S 580</span><div class="pbr-track"><div class="pbr-fill" data-w="76"></div></div><span class="pbr-val">510 hp ★</span></div>
+          <div class="pbr bmw-pbr"><span class="pbr-brand">750i</span><div class="pbr-track"><div class="pbr-fill" data-w="68"></div></div><span class="pbr-val">489 hp</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- 주행 특성 비교 -->
+    <div class="perf-section-title" style="margin-top:20px">주행 철학 비교 — 항목 클릭 시 상세 설명</div>
+    <div class="two-col-grid">
+      <div class="brand-col benz-col">
+        <div class="brand-col-head">
+          <div class="brand-badge benz-badge-bg">✦</div>
+          <div><div class="brand-col-label">Mercedes-Benz</div><div class="brand-col-founding">안락함의 극한</div></div>
+        </div>
+        <div class="item-list">
+          <div class="iitem clickable" data-car="benz" data-feature="에어매틱 서스펜션 — 노면을 떠다니는 느낌" data-detail="에어매틱(AirMatic)은 공기 스프링과 전자 제어 댐퍼를 결합한 에어 서스펜션 시스템입니다. 노면 상태를 실시간 감지해 200분의 1초 단위로 댐핑력을 조절합니다. 고속 주행 시 차고를 낮춰 공기저항을 줄이고, 험로에서는 차고를 높여 클리어런스를 확보합니다. 탑승자는 포장도로, 비포장도로를 구분하기 어려울 정도의 승차감을 경험합니다.">에어매틱 서스펜션 — 최고 수준의 승차감</div>
+          <div class="iitem clickable" data-car="benz" data-feature="9G-Tronic 변속기 — 부드러운 전환" data-detail="9단 자동변속기로, 기어 변속이 거의 느껴지지 않을 정도로 부드럽습니다. Comfort 모드에서는 낮은 rpm을 유지하며 연비를 최적화하고, Sport+ 모드에서는 높은 rpm을 유지하며 역동적인 주행을 지원합니다. 수동 변속 시 패들시프터도 제공됩니다. 전반적으로 BMW의 8단 대비 변속 충격이 더 적고 조용하다는 평이 지배적입니다.">9G-Tronic — 9단 부드러운 변속기</div>
+          <div class="iitem clickable" data-car="benz" data-feature="4MATIC 사륜구동 — 안정성 우선" data-detail="메르세데스-벤츠의 사륜구동 시스템입니다. 상시 사륜구동으로 전/후륜 토크 배분을 자동 조절합니다. 운전자 조작 없이도 최적의 구동력을 배분해 악천후에서도 안정적인 주행을 보장합니다. 스포티한 후륜 편중 배분을 즐기는 BMW xDrive와 달리, 4MATIC은 안정성과 편안함에 더 집중합니다.">4MATIC AWD — 안정성 중심 사륜구동</div>
+          <div class="iitem clickable" data-car="benz" data-feature="후륜 조향 시스템 (Rear Axle Steering)" data-detail="고속에서는 뒷바퀴가 앞바퀴와 같은 방향으로 조향되어 직진 안정성을 높이고, 저속에서는 반대 방향으로 조향되어 회전 반경을 줄입니다. 약 4.5도 조향이 가능하며, E-Class 기준으로 주차 시 회전 반경이 일반 C-Class 수준으로 줄어듭니다. 대형 차량의 운동성을 컴팩트카처럼 만들어주는 기술입니다.">후륜 조향 — 대형차의 민첩성</div>
+        </div>
+      </div>
+      <div class="brand-col bmw-col">
+        <div class="brand-col-head">
+          <div class="brand-badge bmw-badge-bg">◎</div>
+          <div><div class="brand-col-label">BMW</div><div class="brand-col-founding">드라이빙의 극한</div></div>
+        </div>
+        <div class="item-list">
+          <div class="iitem clickable" data-car="bmw" data-feature="M Adaptive Suspension — 스포티 정밀 제어" data-detail="BMW의 M 어댑티브 서스펜션은 전자 제어 댐퍼로 노면 상태와 주행 모드에 따라 감쇠력을 실시간 조절합니다. Comfort 모드에서는 메르세데스-벤츠처럼 부드럽게 세팅되지만, Sport+ 모드로 바꾸면 댐핑이 크게 강화되어 운전자가 노면 정보를 더 직접적으로 느낄 수 있습니다. 에어 서스펜션보다 스프링 응답이 빠르고 정교한 피드백을 제공합니다.">M 어댑티브 서스펜션 — 정교한 피드백</div>
+          <div class="iitem clickable" data-car="bmw" data-feature="스텝트로닉 8단 — 스포티 변속" data-detail="BMW의 8단 자동변속기로, 메르세데스의 9단 대비 단수가 적지만 변속 속도가 더 빠릅니다. Sport 모드에서는 고rpm을 유지하며 날카로운 변속 충격을 의도적으로 전달해 드라이빙 감성을 극대화합니다. 패들시프터로 수동 조작도 가능하며, M 모델에는 M Steptronic이 적용되어 레이싱카 수준의 빠른 변속을 지원합니다.">스텝트로닉 8단 — 빠르고 역동적인 변속</div>
+          <div class="iitem clickable" data-car="bmw" data-feature="xDrive AWD — 후륜 편중 배분" data-detail="BMW의 xDrive는 상시 사륜구동이지만 기본 토크 배분이 전륜 40:후륜 60으로 후륜 편중입니다. 이로 인해 전형적인 후륜구동 특성인 '밀어주는 느낌'이 살아 있어 코너링에서 재미있는 주행감을 만들어냅니다. 다이내믹 스태빌리티 컨트롤(DSC)을 해제하면 오버스티어를 즐길 수도 있습니다. '운전의 즐거움'이라는 BMW 철학을 구현하는 핵심 기술입니다.">xDrive AWD — 후륜 편중의 스포티 사륜</div>
+          <div class="iitem clickable" data-car="bmw" data-feature="인테그럴 액티브 스티어링" data-detail="앞뒤 바퀴 모두 조향이 가능한 BMW의 전륜/후륜 통합 조향 시스템입니다. 3도까지 후륜 조향이 가능하며, 메르세데스의 후륜 조향과 유사한 효과를 제공합니다. 핸들 응답성이 더 직접적이고 예리하게 느껴지는 것이 특징으로, 서킷에서도 원활한 코너링이 가능합니다.">인테그럴 액티브 스티어링 — 날카로운 코너링</div>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ══ SLIDE 6: PRICE + VERDICT ════════════════════════ -->
-  <div class="slide slide-scrollable" data-slide="6" data-label="가격 & 총평">
-    <div class="slide-body-scroll">
-      <div class="sec-header">
-        <span class="sec-label">PRICE & VERDICT</span>
-        <h2>가격 비교 & 총평</h2>
-        <p>870만원의 차이가 의미하는 것</p>
-      </div>
-
-      <div class="price-arena">
-        <div class="price-card benz-price-card">
-          <div class="price-maker">Mercedes-Benz</div>
-          <div class="price-name">E 300 4MATIC AMG Line</div>
-          <div class="price-num"><span class="pn-amount" data-target="9770">0</span><span class="pn-unit">만원</span></div>
-          <ul class="price-pros">
-            <li class="pro">부메스터 4D 서라운드 사운드</li>
-            <li class="pro">MBUX 슈퍼스크린</li>
-            <li class="pro">디지털 라이트</li>
-            <li class="pro">에어백 10개</li>
-            <li class="pro">발광 도어실 패널</li>
-            <li class="con">4존 에어컨 없음</li>
-            <li class="con">BSI 무상유지 미포함</li>
-          </ul>
-        </div>
-        <div class="price-gap">
-          <div class="price-gap-num">870만원</div>
-          <div class="price-gap-label">차이</div>
-          <div class="price-gap-arrow">BMW가 저렴</div>
-        </div>
-        <div class="price-card bmw-price-card">
-          <div class="price-maker">BMW</div>
-          <div class="price-name">530i M Sport xDrive P1</div>
-          <div class="price-num"><span class="pn-amount" data-target="8900">0</span><span class="pn-unit">만원</span></div>
-          <ul class="price-pros">
-            <li class="pro">BSI 프리미엄 5년/10만km</li>
-            <li class="pro">4존 에어컨</li>
-            <li class="pro">20" M Sport 휠</li>
-            <li class="pro">메리노 가죽 시트</li>
-            <li class="pro">제스처 컨트롤</li>
-            <li class="con">하만카돈 (부메스터 미만)</li>
-            <li class="con">MBUX 슈퍼스크린 없음</li>
-          </ul>
+<!-- ══ SLIDE 5: 기술 & 혁신 ══ -->
+<div class="slide slide-features" data-slide="5" data-label="기술">
+  <div class="slide-body">
+    <div class="sec-header sec-header-sm">
+      <span class="sec-label">TECHNOLOGY</span>
+      <h2>기술 &amp; 혁신</h2>
+      <p>항목을 <strong>클릭</strong>하면 상세 설명이 표시됩니다</p>
+    </div>
+    <div class="feat-tabs">
+      <button class="ftab active" data-tab="tech-info">인포테인먼트</button>
+      <button class="ftab" data-tab="tech-ev">전동화 &amp; EV</button>
+      <button class="ftab" data-tab="tech-safety">안전 기술</button>
+    </div>
+    <div class="feat-panels">
+      <!-- 인포테인먼트 -->
+      <div class="feat-panel active" id="fpanel-tech-info">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> MBUX — Mercedes User Experience</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="MBUX 슈퍼스크린 & AR 내비게이션" data-detail="대시보드 전체를 덮는 대형 OLED 디스플레이와 증강현실(AR) 내비게이션의 조합입니다. AR 내비게이션은 실제 도로 카메라 영상 위에 경로 화살표를 직접 겹쳐 보여줘 복잡한 교차로에서도 직관적인 안내가 가능합니다. 조수석 전용 엔터테인먼트 화면도 포함되어 운전 중 조수석 탑승자가 독립적으로 영상을 시청할 수 있습니다. BMW에는 이에 해당하는 기능이 없습니다.">MBUX 슈퍼스크린 + AR 내비게이션 ★</li>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="셀피 카메라 & 줌 화상회의" data-detail="차량 실내 카메라가 내장되어 탑승자 셀피 촬영과 영상통화가 가능합니다. MBUX 엔터테인먼트 플러스를 통해 Zoom 화상회의, 유튜브, 게임 등 다양한 앱을 차량 화면에서 바로 실행할 수 있습니다. LTE 통신 모듈 내장으로 스마트폰 없이도 독립적으로 인터넷 접속이 가능합니다. 차가 이동 사무실이 되는 경험입니다.">차내 줌(Zoom) 화상회의 & 셀피 카메라</li>
+              <li class="fitem clickable" data-car="benz" data-feature="MBUX 음성 비서 — Hey Mercedes" data-detail="'헤이 메르세데스'라는 호출어로 실행되는 AI 음성 비서입니다. 자연어 처리 능력이 뛰어나 '조금 더 따뜻하게 해줘', '오늘 날씨 어때?', '가장 가까운 주유소 찾아줘' 같은 일상 언어 명령을 이해합니다. 사용 패턴을 학습해 자주 가는 목적지, 즐겨 듣는 음악을 기억하는 개인화 기능도 제공합니다.">Hey Mercedes — AI 음성 비서</li>
+              <li class="fitem clickable" data-car="benz" data-feature="디지털 키 & 스마트폰 원격 제어" data-detail="스마트폰을 차키로 사용하는 디지털 키 기능입니다. NFC 또는 블루투스로 잠금 해제 및 시동이 가능하며, 다른 사람에게 디지털 키를 전송할 수도 있습니다. 메르세데스 미(Mercedes me) 앱으로 차량 원격 잠금, 위치 확인, 에어컨 원격 작동도 가능합니다.">디지털 키 & Mercedes me 원격 제어</li>
+              <li class="fitem clickable" data-car="benz" data-feature="OTA 무선 업데이트" data-detail="스마트폰처럼 자동차 소프트웨어를 무선으로 업데이트할 수 있습니다. 딜러 방문 없이도 새로운 기능 추가, 버그 수정, 성능 개선이 이루어집니다. 메르세데스-벤츠는 OTA로 내비게이션 지도, MBUX UI, 주행 보조 시스템까지 업데이트합니다.">OTA 무선 소프트웨어 업데이트</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> iDrive 8 — BMW Living Experience</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="파노라믹 iDrive — 2025+ 신세대 시스템" data-detail="2025년 이후 출시되는 신형 BMW에 탑재되는 차세대 인포테인먼트 플랫폼입니다. 대형 헤드업 디스플레이와 커브드 듀얼 스크린, 강화된 자연어 처리 AI가 핵심입니다. LLM(대형 언어 모델)을 적용해 문맥을 이해하는 대화형 음성 명령이 가능해졌습니다. BMW는 전 세계적으로 1,000만 건 이상의 OTA 업데이트를 이미 완료했습니다.">파노라믹 iDrive — 2025년 신세대 ★</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="제스처 컨트롤 — 손동작으로 조작" data-detail="대시보드 상단 카메라가 운전자의 손 동작을 인식합니다. 손을 원형으로 돌리면 볼륨 조절, 손가락을 스크린 방향으로 뻗으면 전화 받기, 두 손가락으로 화면을 가리키면 전화 끊기 등 총 7가지 제스처를 지원합니다. 운전 중 시선을 뺏기지 않고 기능을 조작할 수 있는 안전 기능이기도 합니다.">제스처 컨트롤 — 손동작으로 기능 조작</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="리모트 엔진 스타트" data-detail="BMW 앱 또는 스마트키 리모컨으로 차량에서 최대 400m 거리에서 원격 시동이 가능합니다. 겨울철 미리 실내를 따뜻하게 하거나, 여름철 에어컨을 먼저 가동해 탑승 전 최적의 온도로 만들 수 있습니다. 메르세데스-벤츠에도 앱으로 원격 제어가 가능하지만, BMW의 리모컨 기반 원격 시동이 더 간편하다는 평가입니다.">원격 시동 (리모트 엔진 스타트)</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="BMW 디지털 키 플러스 (UWB)" data-detail="초광대역(UWB) 기술로 스마트폰의 정확한 위치를 인식해 주머니나 가방에 폰을 넣은 상태에서도 차 문이 자동으로 잠금 해제됩니다. 애플 워치, 애플 카키도 지원하며, 삼성 갤럭시 스마트폰과도 호환됩니다. UWB 기술로 릴레이 어택(해킹) 방어 기능도 강화되었습니다.">BMW 디지털 키 플러스 (UWB 기술)</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="Hey BMW — LLM 기반 음성 비서" data-detail="'헤이 BMW'로 실행되는 AI 음성 비서로, 2025년 이후 모델부터 LLM(대형 언어 모델)이 적용되었습니다. 단순 명령어뿐 아니라 문맥을 이해하는 대화가 가능합니다. '오늘 저녁 약속 있는데 1시간 전에 출발 알림 줘', '어제 갔던 카페로 다시 안내해줘' 같은 복합적인 요청도 처리합니다.">Hey BMW — LLM 대화형 음성 비서</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <div class="verdict-grid">
-        <div class="verdict-card benz-verdict">
-          <div class="vc-icon">✦</div>
-          <h3>E 300 AMG Line 추천</h3>
-          <p class="vc-sub">이런 분께 어울립니다</p>
-          <ul>
-            <li>최고급 오디오를 원하는 분 <em>(부메스터 4D)</em></li>
-            <li>최신 디스플레이 기술 <em>(MBUX 슈퍼스크린)</em></li>
-            <li>안전에 최우선을 두는 분 <em>(에어백 10개)</em></li>
-            <li>넓은 트렁크가 필요한 분 <em>(540L)</em></li>
-            <li>프리미엄 독일 세단 감성을 원하는 분</li>
-          </ul>
-        </div>
-        <div class="verdict-card bmw-verdict">
-          <div class="vc-icon">◎</div>
-          <h3>530i M Sport 추천</h3>
-          <p class="vc-sub">이런 분께 어울립니다</p>
-          <ul>
-            <li>가성비를 중시하는 분 <em>(870만원 절약)</em></li>
-            <li>스포티한 드라이빙 감성 <em>(M Sport 튜닝)</em></li>
-            <li>장거리 편의성 <em>(4존 에어컨)</em></li>
-            <li>유지비 절감 <em>(BSI 5년/10만km)</em></li>
-            <li>넓은 뒷좌석 공간 <em>(축거 35mm 더 길음)</em></li>
-          </ul>
+      <!-- EV -->
+      <div class="feat-panel" id="fpanel-tech-ev">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> EQ 시리즈 — 럭셔리 전기차</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="EQS — 플래그십 전기 세단" data-detail="메르세데스-벤츠 EV 라인업의 정점입니다. WLTP 기준 최대 780km 주행 가능한 초대형 배터리를 탑재합니다. 외관은 전통적인 세단이 아닌 에어로다이나믹 패스트백 형태로, 공기저항계수(Cd) 0.20을 달성해 양산차 중 가장 낮은 수준입니다. 200kW 급속충전으로 10%→80% 충전에 약 31분이 소요됩니다. BMW i7과 경쟁하는 최정상급 럭셔리 EV입니다.">EQS — 최대 780km 주행 플래그십 EV</li>
+              <li class="fitem clickable" data-car="benz" data-feature="EQE — E-Class급 전기 세단" data-detail="E-Class에 대응하는 전기 세단입니다. WLTP 기준 최대 654km 주행이 가능하며, EQS와 동일한 전기차 전용 플랫폼(EVA2)을 공유합니다. 실내에는 EQS와 동일한 MBUX 하이퍼스크린 옵션이 제공됩니다. BMW i5(538km)와 직접 경쟁하는 포지션입니다.">EQE — E-Class급 전기 세단</li>
+              <li class="fitem clickable" data-car="benz" data-feature="EQ 전용 디자인 철학" data-detail="메르세데스-벤츠의 EQ 라인업은 전통적인 ICE(내연기관) 모델과 완전히 다른 전용 디자인을 사용합니다. EQS는 S-Class처럼 생기지 않았습니다. 이는 전기차만의 정체성을 부여하는 전략으로, 소비자가 EV를 새로운 카테고리로 인식하도록 유도합니다. 반면 BMW는 i5가 5시리즈와 거의 동일한 외관을 공유하는 통합 접근법을 취합니다.">EQ 전용 디자인 — 독립적 EV 아이덴티티</li>
+              <li class="fitem clickable" data-car="benz" data-feature="2025년 EV 판매 실적" data-detail="2025년 메르세데스-벤츠 그룹의 전기차 판매량은 197,300대로, 전년 대비 -4.0% 감소했습니다. 반면 BMW는 442,072대(+3.6%)를 기록해 글로벌 EV 시장에서 메르세데스 대비 2.2배 앞서고 있습니다. 중국 시장 부진(-27%)이 메르세데스 EV 판매 감소의 주요 원인으로 분석됩니다.">2025 EV 판매: 197,300대 (-4%)</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> BMW i 시리즈 — 드라이빙 EV</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="BMW i5 — 5시리즈와 완전 동일 외관" data-detail="2023년 출시된 BMW i5는 내연기관 530i와 사실상 동일한 외관을 공유합니다. 가솔린 차를 살지, 전기차를 살지 외관으로는 구분하기 힘든 통합 디자인 전략입니다. 540i xDrive 사양의 i5 M60 xDrive는 601마력, 0→100km/h 3.8초의 퍼포먼스를 발휘합니다. WLTP 기준 최대 582km 주행 가능하며, 가격은 한국 기준 약 9,000만원대부터 시작합니다.">i5 — 5시리즈와 같은 외관의 전기차</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="BMW iX — EV 전략의 중심" data-detail="BMW의 전기 SUV 플래그십으로, 새로운 디자인 언어를 가장 먼저 선보인 모델입니다. iX xDrive50 기준 최대 630km 주행 가능, 0→100km/h 4.6초 성능을 발휘합니다. 차체는 철강, 알루미늄, CFRP를 혼합한 eDrive 전용 구조로 경량화와 강성을 동시에 달성했습니다. 내부는 BMW 최초로 물리 버튼을 최소화한 미니멀리스트 인테리어를 채택했습니다.">iX — BMW EV 아이콘</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="2025년 EV 판매 세계 1위 (프리미엄)" data-detail="2025년 BMW 그룹은 전기차 442,072대를 판매해 전년 대비 3.6% 성장했습니다. 메르세데스-벤츠(197,300대)의 2.2배, 아우디(약 170,000대)의 2.6배에 달하는 규모입니다. 미국 시장에서는 BMWが 전기차 포함 총 388,897대 판매로 3년 연속 미국 프리미엄 브랜드 1위를 기록했습니다. EV 전환에서도 BMW가 메르세데스보다 한 발 앞서 있습니다.">2025 EV 판매: 442,072대 (+3.6%) ★</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="Neue Klasse EV 플랫폼 (2025~)" data-detail="2025년부터 적용되는 BMW 차세대 전기차 전용 플랫폼입니다. 원통형 배터리(46mm) 채택으로 에너지 밀도를 20% 향상시키고, 충전 속도는 30% 개선되었습니다. 차세대 iDrive를 위한 '파노라믹 iDrive' 시스템도 이 플랫폼에서 처음 선보입니다. 새로운 전기 모터는 효율을 25% 높였으며, Neue Klasse는 BMW 전동화 전략의 핵심 무기입니다.">Neue Klasse — 차세대 EV 플랫폼</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <div class="verdict-summary">
-        <div class="vs-inner">
-          <h3>핵심 교훈</h3>
-          <p>두 차는 <strong>0→100km/h 6.1초, 258마력, 복합연비 11.1km/L, 공차중량 1,905kg</strong>이 모두 동일합니다. 같은 성능의 두 차가 어떻게 다른 방향으로 진화했는지를 보여주는 완벽한 비교입니다.</p>
-          <p>메르세데스-벤츠는 <strong>오디오, 디스플레이, 안전 기술</strong>에서 프리미엄 우위를 유지하며 럭셔리의 정점을 추구합니다. BMW는 <strong>가격 경쟁력, 실내 공간, 무상 유지보수</strong>로 실용적 가치를 극대화합니다.</p>
+      <!-- 안전 -->
+      <div class="feat-panel" id="fpanel-tech-safety">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> Pre-Safe — 충돌 전 선제 대응</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="Pre-Safe 시스템 — 충돌 0.3초 전에 대응" data-detail="충돌이 예측되는 순간, 실제 충돌 이전에 미리 대응하는 선제적 안전 시스템입니다. ①안전벨트 자동 긴장, ②창문 자동 닫기, ③서스펜션 높이 조정, ④Pre-Safe Sound(귀를 보호하기 위해 약한 소리를 먼저 발생시켜 귀의 반사 근육을 수축시킴), ⑤후방 에어백 선배치 등 총 5가지 조치를 0.3초 안에 동시에 실행합니다. BMW의 액티브 프로텍션보다 더 많은 선제 대응 항목을 갖추고 있습니다.">Pre-Safe — 5가지 선제 대응 시스템 ★</li>
+              <li class="fitem advantage clickable" data-car="benz" data-feature="에어백 10개 — 전방위 탑승자 보호" data-detail="운전석·동반석 정면(2개), 무릎(2개), 앞·뒤 사이드(4개), 앞·뒤 커튼(2개) 등 총 10개의 에어백이 탑승자를 전방위로 감쌉니다. 일부 모델에는 센터 에어백도 추가됩니다. 일반적인 BMW 대비 더 많은 에어백으로, 측면·후방 충돌 시 추가적인 보호를 제공합니다. 미국 NHTSA 5성급 안전 등급을 획득했습니다.">에어백 10개 — 전방위 탑승자 보호</li>
+              <li class="fitem clickable" data-car="benz" data-feature="액티브 브레이크 어시스트" data-detail="전방 카메라와 레이더로 차량, 보행자, 자전거 이용자를 감지하고 충돌 위험 시 자동으로 제동을 적용합니다. 운전자 반응이 없을 경우 최대 제동력으로 자동 정지합니다. 60km/h 이하에서는 보행자, 자전거와의 충돌을 완전히 방지하거나 크게 완화할 수 있습니다.">액티브 브레이크 어시스트 + 보행자 감지</li>
+              <li class="fitem clickable" data-car="benz" data-feature="액티브 레인 체인징 어시스트" data-detail="고속도로 주행 중 방향지시등을 켜면 시스템이 사각지대를 확인하고 안전할 경우 자동으로 차선을 변경해줍니다. 단순히 경고만 하는 것이 아니라 실제로 스티어링을 조작해 차선 변경을 완료합니다. Level 2 반자율 주행을 지원하며, 조건부 핸즈프리 주행도 일부 가능합니다.">자동 차선 변경 어시스트</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> 드라이빙 어시스턴트 프로페셔널</h3>
+            <ul>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="파킹 어시스턴트 플러스 — 완전 자동 주차" data-detail="주차 공간을 자동 탐색하고 스티어링, 변속, 가속, 제동을 모두 자동으로 제어해 운전자 개입 없이 완전 자동 주차를 수행합니다. '리버스 어시스턴트'는 최대 50m까지 후진 경로를 기억해 좁은 골목에서 자동으로 후진할 수 있습니다. 이 기능에서 BMW가 메르세데스-벤츠보다 더 완성도 높은 솔루션을 제공한다고 평가됩니다.">파킹 어시스턴트 플러스 — 완전 자동 주차 ★</li>
+              <li class="fitem advantage clickable" data-car="bmw" data-feature="고속도로 주행 보조 (Level 2+)" data-detail="드라이빙 어시스턴트 프로페셔널의 핵심으로, 고속도로에서 스티어링·가속·감속을 모두 자동 제어합니다. 앞차 추종, 차선 유지, 교통 정체 시 완전 정지 및 재출발까지 지원합니다. 일부 조건에서는 핸즈프리(조건부) 주행이 가능하며, 자동 차선 변경도 지원합니다. 메르세데스의 Level 2와 동급이지만 차선 변경 자동화 완성도가 높다는 평가입니다.">고속도로 주행 보조 Level 2+</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="BMW 액티브 크루즈 컨트롤 (Stop&Go)" data-detail="앞차와의 거리를 자동으로 유지하며 속도를 조절하는 어댑티브 크루즈 컨트롤입니다. Stop&Go 기능으로 교통 정체 시 완전 정지까지 자동 대응하고, 차가 다시 움직이면 일정 시간 내 자동으로 추종 주행을 재개합니다. 3단계 거리 조절이 가능하며, 네비게이션과 연동해 전방 커브나 속도 제한 구간에서 미리 감속하는 기능도 있습니다.">액티브 크루즈 컨트롤 Stop&Go</li>
+              <li class="fitem clickable" data-car="bmw" data-feature="후방 충돌 경고 & 액티브 프로텍션" data-detail="뒤에서 빠르게 접근하는 차량이 감지되면 비상등 자동 점멸로 후방 차량에 위험을 알립니다. 충돌 직전에는 안전벨트 자동 긴장, 창문 자동 닫기, 시트 위치 자동 조정이 이루어집니다. 메르세데스-벤츠의 Pre-Safe와 유사한 선제 대응 시스템으로, 두 시스템 모두 Level 2 안전 기술의 최전선에 있습니다.">후방 충돌 경고 & 액티브 프로텍션</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <footer class="slide-footer">
-        <div class="footer-brands"><span>Mercedes-Benz Korea</span><span class="fb-sep">|</span><span>BMW Korea</span></div>
-        <div class="footer-note">* 상기 제원 및 가격은 출시 시점 기준이며 실제와 차이가 있을 수 있습니다. 교육 목적으로 제작되었습니다.</div>
-      </footer>
     </div>
   </div>
+  <div id="featureDetail2" class="feature-detail">
+    <div class="fd-inner">
+      <button class="fd-close" id="fdClose2">✕</button>
+      <div class="fd-car-badge" id="fdCarBadge2"></div>
+      <h3 class="fd-title" id="fdTitle2"></h3>
+      <p class="fd-desc" id="fdDesc2"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SLIDE 6: 가격 & 유지보수 ══ -->
+<div class="slide slide-scrollable" data-slide="6" data-label="가격">
+  <div class="slide-body-scroll">
+    <div class="sec-header">
+      <span class="sec-label">PRICE &amp; MAINTENANCE</span>
+      <h2>가격 &amp; 유지보수</h2>
+    </div>
+    <!-- 세그먼트별 가격 비교 -->
+    <div class="spec-scroll">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th class="spec-cat-head">세그먼트</th>
+            <th class="benz-head"><span>Mercedes-Benz</span></th>
+            <th class="bmw-head"><span>BMW</span></th>
+            <th class="spec-cat-head" style="text-align:center">차이</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="4">한국 시장 기준가 (2025–2026)</td></tr>
+          <tr><td>컴팩트 세단</td><td>C 300 4MATIC — 약 6,700만원</td><td class="bmw-win">330i xDrive — 약 6,200만원 ★</td><td style="text-align:center;color:var(--bmw);font-weight:600">BMW -500만원</td></tr>
+          <tr><td>중형 세단</td><td>E 300 4MATIC — 약 9,800만원</td><td class="bmw-win">530i xDrive — 약 8,900만원 ★</td><td style="text-align:center;color:var(--bmw);font-weight:600">BMW -900만원</td></tr>
+          <tr><td>대형 세단</td><td class="benz-win">S 450 4MATIC — 약 1.8억원</td><td>740i xDrive — 약 1.5억원 ★</td><td style="text-align:center;color:var(--bmw);font-weight:600">BMW -3,000만원</td></tr>
+          <tr><td>고성능</td><td>E 63 S AMG — 약 2.3억원</td><td class="bmw-win">M5 — 약 2.1억원 ★</td><td style="text-align:center;color:var(--bmw);font-weight:600">BMW -2,000만원</td></tr>
+          <tr class="group-row"><td colspan="4">유지보수 비용 (연간 / 10년)</td></tr>
+          <tr><td>연간 유지비</td><td>약 $908/년</td><td>약 $968/년</td><td style="text-align:center;color:var(--benz);font-weight:600">벤츠 -$60</td></tr>
+          <tr><td>10년 누적 유지비</td><td>약 $12,630</td><td class="bmw-win">약 $11,000 ★</td><td style="text-align:center;color:var(--bmw);font-weight:600">BMW -$1,630</td></tr>
+          <tr><td>보증 기간</td><td>4년/8만km</td><td class="bmw-win">4년/8만km + BSI 5년 ★</td><td style="text-align:center;color:var(--bmw);font-weight:600">BMW 압도적 우위</td></tr>
+          <tr><td>5년 감가율</td><td>~55–65%</td><td class="bmw-win">~45–50% ★</td><td style="text-align:center;color:var(--bmw);font-weight:600">BMW 잔존가치 ↑</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- BMW BSI 하이라이트 -->
+    <div class="verdict-summary" style="margin-top:20px">
+      <div class="vs-inner">
+        <h3>BMW BSI 프리미엄 — 가장 큰 실질 혜택</h3>
+        <p>BMW 구매 시 제공되는 <strong>BSI(BMW Service Inclusive) 프리미엄</strong>은 구입 후 <strong>5년 또는 10만km</strong>까지 엔진오일 교환, 정기 점검, 소모품 교환을 모두 무상으로 제공합니다. 실질 절감액은 연간 30–50만원, <strong>5년 기준 총 150–250만원</strong>에 달합니다.</p>
+        <p>메르세데스-벤츠에는 이에 해당하는 무상 유지관리 프로그램이 없습니다. 차량 가격 차이(약 900만원)와 BSI 혜택(약 200만원)을 합산하면, 동급 모델 기준 <strong>BMW가 실질적으로 1,000만원 이상 저렴</strong>할 수 있습니다.</p>
+      </div>
+    </div>
+    <!-- 가격 카드 -->
+    <div class="price-arena" style="margin-top:20px">
+      <div class="price-card benz-price-card">
+        <div class="price-maker">Mercedes-Benz</div>
+        <div class="price-name">E 300 4MATIC AMG Line</div>
+        <div class="price-num"><span class="pn-amount" data-target="9770">0</span><span class="pn-unit">만원</span></div>
+        <ul class="price-pros">
+          <li class="pro">부메스터 4D 서라운드 사운드</li>
+          <li class="pro">MBUX 슈퍼스크린</li>
+          <li class="pro">디지털 라이트 (84픽셀 LED)</li>
+          <li class="pro">에어백 10개</li>
+          <li class="con">BSI 무상 유지 미포함</li>
+          <li class="con">감가율 더 높음</li>
+        </ul>
+      </div>
+      <div class="price-gap">
+        <div class="price-gap-num">870만원</div>
+        <div class="price-gap-label">가격 차이</div>
+        <div class="price-gap-arrow">BMW가 저렴</div>
+      </div>
+      <div class="price-card bmw-price-card">
+        <div class="price-maker">BMW</div>
+        <div class="price-name">530i M Sport xDrive P1</div>
+        <div class="price-num"><span class="pn-amount" data-target="8900">0</span><span class="pn-unit">만원</span></div>
+        <ul class="price-pros">
+          <li class="pro">BSI 5년/10만km 무상 유지</li>
+          <li class="pro">4존 에어컨</li>
+          <li class="pro">메리노 가죽 시트</li>
+          <li class="pro">낮은 감가율 (잔존가치 ↑)</li>
+          <li class="con">하만카돈 (부메스터 미만)</li>
+          <li class="con">MBUX 슈퍼스크린 없음</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SLIDE 7: 소비자 분석 & 종합 추천 ══ -->
+<div class="slide slide-scrollable" data-slide="7" data-label="종합 추천" data-animate="market">
+  <div class="slide-body-scroll">
+    <div class="sec-header">
+      <span class="sec-label">CONSUMER ANALYSIS</span>
+      <h2>소비자 분석 &amp; 종합 추천</h2>
+    </div>
+    <!-- 한국 시장 점유율 -->
+    <div class="market-section">
+      <div class="market-title">2025 한국 수입차 시장 — 연간 판매량</div>
+      <div class="market-bars">
+        <div class="mbar-row bmw">
+          <div class="mbar-label">BMW</div>
+          <div class="mbar-track"><div class="mbar-fill bmw" data-w="90"></div></div>
+          <div class="mbar-val">77,127대</div>
+        </div>
+        <div class="mbar-row benz">
+          <div class="mbar-label">Mercedes</div>
+          <div class="mbar-track"><div class="mbar-fill benz" data-w="80"></div></div>
+          <div class="mbar-val">68,467대</div>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:.75rem;color:var(--text-3);margin-top:12px">BMW 10년 만에 1위 탈환 · 출처: 한국수입자동차협회 2025</p>
+    </div>
+    <!-- 구매자 프로필 -->
+    <div class="two-col-grid" style="margin-top:20px">
+      <div class="brand-col benz-col">
+        <div class="brand-col-head">
+          <div class="brand-badge benz-badge-bg">✦</div>
+          <div><div class="brand-col-label">Mercedes-Benz 구매자</div><div class="brand-col-founding">이런 분께 추천</div></div>
+        </div>
+        <div class="item-list">
+          <div class="iitem">→ 최상급 오디오를 원하는 분 <em style="color:var(--text-3)">(부메스터 4D)</em></div>
+          <div class="iitem">→ 최신 디스플레이 기술 중시 <em style="color:var(--text-3)">(MBUX 슈퍼스크린)</em></div>
+          <div class="iitem">→ 안전을 최우선으로 두는 분 <em style="color:var(--text-3)">(에어백 10개, Pre-Safe)</em></div>
+          <div class="iitem">→ 럭셔리 브랜드 이미지 중시 <em style="color:var(--text-3)">(Das Beste or Nothing)</em></div>
+          <div class="iitem">→ 부드럽고 편안한 승차감 선호 <em style="color:var(--text-3)">(에어매틱 서스펜션)</em></div>
+          <div class="iitem">→ 임원·비즈니스 용도 <em style="color:var(--text-3)">(S-Class 급 격식)</em></div>
+        </div>
+      </div>
+      <div class="brand-col bmw-col">
+        <div class="brand-col-head">
+          <div class="brand-badge bmw-badge-bg">◎</div>
+          <div><div class="brand-col-label">BMW 구매자</div><div class="brand-col-founding">이런 분께 추천</div></div>
+        </div>
+        <div class="item-list">
+          <div class="iitem">→ 드라이빙 퍼포먼스 중시 <em style="color:var(--text-3)">(Sheer Driving Pleasure)</em></div>
+          <div class="iitem">→ 가성비와 총소유비용(TCO) 중시 <em style="color:var(--text-3)">(BSI + 낮은 감가)</em></div>
+          <div class="iitem">→ 스포티한 외관과 주행감 선호 <em style="color:var(--text-3)">(M Sport 패키지)</em></div>
+          <div class="iitem">→ 최신 인포테인먼트 기술 중시 <em style="color:var(--text-3)">(iDrive 8 / 제스처)</em></div>
+          <div class="iitem">→ 전기차 전환 고려 중 <em style="color:var(--text-3)">(EV 판매 2.2배 우위)</em></div>
+          <div class="iitem">→ 젊고 역동적인 이미지 원하는 분 <em style="color:var(--text-3)">(한국 1위 브랜드)</em></div>
+        </div>
+      </div>
+    </div>
+    <!-- 종합 verdict -->
+    <div class="verdict-summary" style="margin-top:20px">
+      <div class="vs-inner">
+        <h3>핵심 결론 — 다른 철학, 다른 선택</h3>
+        <p><strong>Mercedes-Benz</strong>는 "최선이 아니면 아무것도 아니다"는 철학으로 <strong>럭셔리, 기술, 안전의 절대적 정점</strong>을 추구합니다. 부메스터 사운드, MBUX 슈퍼스크린, Pre-Safe 등에서 누구도 부정할 수 없는 우위를 가집니다.</p>
+        <p><strong>BMW</strong>는 "운전의 즐거움"이라는 철학으로 <strong>퍼포먼스, 가치, 전동화에서 앞서</strong> 나갑니다. 2025년 한국 수입차 1위 탈환, 글로벌 EV 판매 2.2배 우위, BSI 무상 유지관리가 BMW의 경쟁력입니다.</p>
+        <p style="text-align:center;margin-top:16px;font-size:.82rem;color:var(--text-3)">두 브랜드 모두 세계 최고의 프리미엄 자동차입니다. 결국 선택은 <strong style="color:var(--text-1)">당신이 자동차에서 무엇을 원하는가</strong>에 달려 있습니다.</p>
+      </div>
+    </div>
+    <footer class="slide-footer">
+      <div class="footer-brands"><span>Mercedes-Benz Korea</span><span class="fb-sep">|</span><span>BMW Korea</span></div>
+      <div class="footer-note">* 가격 및 제원은 출시 시점 기준이며 실제와 차이가 있을 수 있습니다. 교육 목적으로 제작된 자료입니다.</div>
+    </footer>
+  </div>
+</div>
 
 </div><!-- /slidesContainer -->
 
-<!-- ── NAVIGATION DOTS ─────────────────────────────────── -->
+<!-- NAV DOTS -->
 <div id="navDots">
   <button class="ndot active" data-slide="0" title="INTRO"><span class="ndot-label">INTRO</span></button>
-  <button class="ndot" data-slide="1" title="개요"><span class="ndot-label">개요</span></button>
-  <button class="ndot" data-slide="2" title="3D 뷰어"><span class="ndot-label">3D</span></button>
-  <button class="ndot" data-slide="3" title="성능"><span class="ndot-label">성능</span></button>
-  <button class="ndot" data-slide="4" title="기능"><span class="ndot-label">기능</span></button>
-  <button class="ndot" data-slide="5" title="제원"><span class="ndot-label">제원</span></button>
-  <button class="ndot" data-slide="6" title="총평"><span class="ndot-label">총평</span></button>
+  <button class="ndot" data-slide="1" title="목차"><span class="ndot-label">목차</span></button>
+  <button class="ndot" data-slide="2" title="역사"><span class="ndot-label">역사</span></button>
+  <button class="ndot" data-slide="3" title="디자인"><span class="ndot-label">디자인</span></button>
+  <button class="ndot" data-slide="4" title="성능"><span class="ndot-label">성능</span></button>
+  <button class="ndot" data-slide="5" title="기술"><span class="ndot-label">기술</span></button>
+  <button class="ndot" data-slide="6" title="가격"><span class="ndot-label">가격</span></button>
+  <button class="ndot" data-slide="7" title="추천"><span class="ndot-label">추천</span></button>
 </div>
 
-<!-- ── SLIDE ARROWS ──────────────────────────────────────── -->
+<!-- ARROWS -->
 <div id="slideArrows">
   <button class="sarrow" id="slidePrev" disabled aria-label="이전 슬라이드">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
   </button>
-  <div id="slideNumDisplay"><span id="slideNumCur">1</span><span class="sn-sep">·</span><span id="slideNumTotal">7</span></div>
+  <div id="slideNumDisplay"><span id="slideNumCur">1</span><span class="sn-sep">·</span><span id="slideNumTotal">8</span></div>
   <button class="sarrow" id="slideNext" aria-label="다음 슬라이드">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
   </button>
 </div>
 
-<!-- ── SCRIPTS ────────────────────────────────────────────── -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="main.js"></script>
 </body>
