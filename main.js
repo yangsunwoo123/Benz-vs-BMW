@@ -183,23 +183,7 @@ document.addEventListener('keydown', function (e) {
   else if (e.key === 'Escape') { closeAllDetails(); }
 });
 
-var wheelCooldown = false;
-window.addEventListener('wheel', function (e) {
-  var activeSlide = slides[currentSlide];
-  if (activeSlide && activeSlide.classList.contains('slide-scrollable')) {
-    var inner = activeSlide.querySelector('.slide-body-scroll');
-    if (inner) {
-      var atTop = inner.scrollTop <= 0;
-      var atBottom = inner.scrollTop + inner.clientHeight >= inner.scrollHeight - 2;
-      if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) return;
-    }
-  }
-  if (wheelCooldown) return;
-  wheelCooldown = true;
-  setTimeout(function() { wheelCooldown = false; }, 900);
-  if (e.deltaY > 30)  goToSlide(currentSlide + 1);
-  if (e.deltaY < -30) goToSlide(currentSlide - 1);
-}, { passive: true });
+/* wheel navigation removed — scroll only */
 
 var touchStartX = 0, touchStartY = 0;
 document.addEventListener('touchstart', function (e) {

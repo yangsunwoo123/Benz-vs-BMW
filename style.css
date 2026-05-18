@@ -929,18 +929,18 @@ canvas { display: block; }
   width: 100%; border-radius: 10px; overflow: hidden;
   margin-bottom: 16px; flex-shrink: 0; border: 1px solid var(--border);
 }
-.img-banner img { width: 100%; height: 300px; object-fit: cover; display: block; }
+.img-banner img { width: 100%; height: auto; display: block; }
 .img-banner-sm {
   width: 100%; border-radius: 10px; overflow: hidden;
   margin-bottom: 16px; flex-shrink: 0; border: 1px solid var(--border);
 }
-.img-banner-sm img { width: 100%; height: 300px; object-fit: cover; display: block; }
+.img-banner-sm img { width: 100%; height: auto; display: block; }
 .design-banner {
   width: 100%; border-radius: 10px; overflow: hidden;
   margin-bottom: 16px; flex-shrink: 0; border: 1px solid var(--border);
   flex: 0 0 auto;
 }
-.design-banner img { width: 100%; height: 300px; object-fit: cover; display: block; }
+.design-banner img { width: 100%; height: auto; display: block; }
 
 /* ── PERFORMANCE SECTION TITLE ───────────────────────── */
 .perf-section-title {
