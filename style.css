@@ -1,0 +1,731 @@
+/* ═══════════════════════════════════════════════════════════
+   PREMIUM AUTOMOTIVE COMPARISON SITE — STYLE SYSTEM
+   Mercedes-Benz E300 AMG Line vs BMW 530i M Sport xDrive
+═══════════════════════════════════════════════════════════ */
+
+/* ── TOKENS ──────────────────────────────────────────────── */
+:root {
+  --bg:          #06060a;
+  --surface:     #0d0d12;
+  --surface-2:   #13131a;
+  --border:      rgba(255,255,255,0.07);
+  --border-hi:   rgba(255,255,255,0.14);
+
+  --text-1: #f0f0f4;
+  --text-2: #9090a8;
+  --text-3: #555568;
+
+  --benz:        #c4a45a;
+  --benz-light:  #d8bc7a;
+  --benz-dark:   #8a7030;
+  --benz-glow:   rgba(196,164,90,0.18);
+  --benz-glow-2: rgba(196,164,90,0.08);
+
+  --bmw:         #1c69d4;
+  --bmw-light:   #4a90f4;
+  --bmw-dark:    #0a3d8a;
+  --bmw-glow:    rgba(28,105,212,0.18);
+  --bmw-glow-2:  rgba(28,105,212,0.08);
+
+  --green: #3dba6e;
+  --red:   #e05050;
+
+  --font-head:   'Montserrat', sans-serif;
+  --font-body:   'Noto Sans KR', 'Inter', sans-serif;
+
+  --ease:   cubic-bezier(0.4,0,0.2,1);
+  --spring: cubic-bezier(0.34,1.56,0.64,1);
+
+  --nav-h: 64px;
+  --container: 1280px;
+}
+
+/* ── RESET ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  background: var(--bg);
+  color: var(--text-1);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+canvas { display: block; }
+
+/* ── LOADING SCREEN ──────────────────────────────────────── */
+#loader {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.6s var(--ease), visibility 0.6s;
+}
+#loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.loader-inner { text-align: center; }
+.loader-logos {
+  display: flex; align-items: center; gap: 20px;
+  font-family: var(--font-head); font-size: 2.5rem; font-weight: 700;
+  margin-bottom: 32px;
+}
+.loader-star  { color: var(--benz); animation: pulse-benz 1.2s ease infinite; }
+.loader-vs    { font-size: 1rem; color: var(--text-3); letter-spacing: .3em; }
+.loader-circle{ color: var(--bmw); animation: pulse-bmw 1.2s ease infinite 0.3s; }
+
+@keyframes pulse-benz  { 0%,100%{ opacity:1; transform:scale(1) } 50%{ opacity:.5; transform:scale(0.9) } }
+@keyframes pulse-bmw   { 0%,100%{ opacity:1; transform:scale(1) } 50%{ opacity:.5; transform:scale(0.9) } }
+
+.loader-bar-track {
+  width: 240px; height: 2px;
+  background: var(--surface-2);
+  border-radius: 2px; overflow: hidden; margin: 0 auto 16px;
+}
+.loader-bar-fill {
+  height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--benz), var(--bmw));
+  animation: loader-fill 1.8s var(--ease) forwards;
+}
+@keyframes loader-fill { to { width: 100%; } }
+
+.loader-label {
+  font-family: var(--font-head);
+  font-size: .7rem; letter-spacing: .3em;
+  color: var(--text-3); text-transform: uppercase;
+}
+
+/* ── NAVIGATION ──────────────────────────────────────────── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  background: rgba(6,6,10,0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s var(--ease);
+}
+#nav.scrolled { background: rgba(6,6,10,0.96); }
+
+.nav-wrap {
+  max-width: var(--container); margin: 0 auto;
+  height: var(--nav-h); padding: 0 24px;
+  display: flex; align-items: center; gap: 32px;
+}
+.nav-brand {
+  font-family: var(--font-head); font-weight: 600; font-size: .85rem;
+  letter-spacing: .04em; flex-shrink: 0;
+  display: flex; align-items: center; gap: 8px;
+}
+.nb-benz { color: var(--benz); }
+.nb-vs   { color: var(--text-3); font-size: .7rem; }
+.nb-bmw  { color: var(--bmw); }
+
+.nav-links { display: flex; gap: 4px; margin-left: auto; }
+.nav-links a {
+  padding: 6px 12px;
+  font-size: .82rem; font-weight: 500; letter-spacing: .02em;
+  color: var(--text-2); border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--text-1); background: var(--surface-2); }
+
+.nav-burger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px; margin-left: auto;
+}
+.nav-burger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--text-2); border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav-progress-bar {
+  height: 2px; width: 0;
+  background: linear-gradient(90deg, var(--benz), var(--bmw));
+  transition: width 0.1s linear;
+}
+
+/* ── MOBILE MENU ─────────────────────────────────────────── */
+.mobile-menu {
+  position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 499;
+  background: rgba(6,6,10,0.97); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px 24px;
+  display: none;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu ul { display: flex; flex-direction: column; gap: 4px; }
+.mobile-menu a {
+  display: block; padding: 12px 16px;
+  font-size: 1rem; font-weight: 500;
+  color: var(--text-2); border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-menu a:hover { color: var(--text-1); background: var(--surface-2); }
+
+/* ── CONTAINER ───────────────────────────────────────────── */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* ── SECTION HEADER ──────────────────────────────────────── */
+.sec-header { text-align: center; margin-bottom: 56px; }
+.sec-label {
+  display: inline-block; margin-bottom: 12px;
+  font-family: var(--font-head); font-size: .68rem;
+  letter-spacing: .35em; text-transform: uppercase;
+  color: var(--text-3);
+}
+.sec-header h2 {
+  font-family: var(--font-head); font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700; line-height: 1.15; margin-bottom: 12px;
+}
+.sec-header p { color: var(--text-2); font-size: .95rem; max-width: 520px; margin: 0 auto; }
+
+/* ── SECTION SHARED ──────────────────────────────────────── */
+section { padding: 100px 0; position: relative; }
+
+/* ── HERO ────────────────────────────────────────────────── */
+#hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; padding: 0;
+}
+#heroCanvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  width: 100%; padding: 100px 24px 60px;
+  display: flex; flex-direction: column; align-items: center; gap: 40px;
+}
+
+.hero-split {
+  display: flex; align-items: center; gap: 0;
+  width: 100%; max-width: 900px;
+}
+.hero-side {
+  flex: 1; text-align: center; padding: 40px 24px;
+  opacity: 0; transform: translateX(-30px);
+  animation: hero-in 1.2s var(--ease) 2s forwards;
+}
+.hero-bmw {
+  transform: translateX(30px);
+  animation-delay: 2.1s;
+}
+
+@keyframes hero-in { to { opacity:1; transform:translateX(0); } }
+
+.hs-brand {
+  font-family: var(--font-head); font-size: .75rem;
+  letter-spacing: .3em; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 8px;
+}
+.hero-benz .hs-brand { color: var(--benz-dark); }
+.hero-bmw  .hs-brand { color: var(--bmw-dark); }
+
+.hs-model {
+  font-family: var(--font-head);
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 900; line-height: 1;
+  margin-bottom: 8px;
+}
+.hero-benz .hs-model {
+  background: linear-gradient(135deg, var(--benz-light), var(--benz), var(--benz-dark));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-bmw .hs-model {
+  background: linear-gradient(135deg, var(--bmw-light), var(--bmw), var(--bmw-dark));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hs-trim {
+  font-family: var(--font-head); font-size: .9rem; font-weight: 500;
+  color: var(--text-2); letter-spacing: .05em; margin-bottom: 4px;
+}
+.hs-year { font-size: .75rem; color: var(--text-3); letter-spacing: .1em; }
+
+.hero-divider {
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; width: 80px;
+}
+.hero-vs {
+  width: 56px; height: 56px;
+  background: var(--surface-2); border: 1px solid var(--border-hi);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-size: .75rem; font-weight: 700;
+  color: var(--text-3); letter-spacing: .1em;
+  opacity: 0; animation: hero-vs-in 0.8s var(--ease) 2.4s forwards;
+}
+@keyframes hero-vs-in { to { opacity:1; } }
+
+.hero-tagline {
+  text-align: center;
+  opacity: 0; animation: hero-in 0.8s var(--ease) 2.6s forwards;
+  transform: none;
+}
+.ht-main {
+  font-family: var(--font-head); font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 300; color: var(--text-1); margin-bottom: 12px; letter-spacing: .05em;
+}
+.ht-stats {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: 8px 4px;
+  font-size: .8rem; color: var(--text-3); font-family: var(--font-head);
+  letter-spacing: .06em;
+}
+.dot { color: var(--text-3); }
+
+.hero-scroll {
+  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+  z-index: 2; text-align: center;
+  opacity: 0; animation: hero-in 0.8s var(--ease) 3s forwards;
+}
+.hero-scroll span {
+  display: block; font-family: var(--font-head);
+  font-size: .65rem; letter-spacing: .3em; color: var(--text-3); margin-bottom: 8px;
+}
+.hero-scroll-line {
+  width: 1px; height: 40px; background: linear-gradient(to bottom, var(--text-3), transparent);
+  margin: 0 auto; animation: scroll-pulse 2s ease infinite;
+}
+@keyframes scroll-pulse {
+  0%,100%{ transform:scaleY(1); opacity:.6 }
+  50%{ transform:scaleY(0.7); opacity:1 }
+}
+
+/* ── OVERVIEW ────────────────────────────────────────────── */
+#overview { background: var(--surface); }
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 32px; align-items: start;
+}
+
+.ov-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.benz-card:hover { border-color: var(--benz-dark); box-shadow: 0 0 40px var(--benz-glow-2); }
+.bmw-card:hover  { border-color: var(--bmw-dark);  box-shadow: 0 0 40px var(--bmw-glow-2); }
+
+.ov-head { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.ov-badge {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0;
+}
+.benz-badge { background: var(--benz-glow); color: var(--benz); }
+.bmw-badge  { background: var(--bmw-glow);  color: var(--bmw); }
+
+.ov-maker { font-size: .75rem; color: var(--text-3); letter-spacing: .1em; }
+.ov-model { font-family: var(--font-head); font-size: .95rem; font-weight: 600; margin: 2px 0; }
+.ov-code  { font-size: .72rem; color: var(--text-3); }
+
+.ov-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ov-stat { text-align: center; }
+.ov-val {
+  display: block; font-family: var(--font-head); font-size: 1.5rem; font-weight: 700;
+  line-height: 1.1; margin-bottom: 4px;
+}
+.benz-card .ov-val { color: var(--benz); }
+.bmw-card  .ov-val { color: var(--bmw); }
+.ov-val sub { font-size: .6em; font-weight: 400; color: var(--text-2); }
+.ov-lbl { font-size: .72rem; color: var(--text-3); letter-spacing: .04em; }
+
+.ov-shared {
+  min-width: 260px; background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 16px; padding: 28px;
+}
+.ov-shared h3 {
+  font-family: var(--font-head); font-size: .7rem;
+  letter-spacing: .25em; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 16px; text-align: center;
+}
+.shared-list { display: flex; flex-direction: column; gap: 8px; }
+.shared-list li {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: .8rem; padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.shared-list li:last-child { border-bottom: none; }
+.shared-list li span:first-child { color: var(--text-3); }
+.shared-list li span:last-child  { font-weight: 600; color: var(--green); }
+
+/* ── 3D VIEWER ───────────────────────────────────────────── */
+#viewer { background: var(--bg); padding-bottom: 60px; }
+
+.viewer-wrap {
+  display: flex; height: 480px; position: relative;
+  margin-top: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.viewer-half { flex: 1; position: relative; cursor: grab; }
+.viewer-half:active { cursor: grabbing; }
+
+#benzCanvas, #bmwCanvas { width: 100%; height: 100%; }
+
+.viewer-overlay {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  text-align: center; pointer-events: none; z-index: 2;
+}
+.viewer-car-name {
+  font-family: var(--font-head); font-size: .85rem; font-weight: 600;
+  letter-spacing: .1em; margin-bottom: 4px;
+}
+.viewer-benz .viewer-car-name { color: var(--benz); }
+.viewer-bmw  .viewer-car-name { color: var(--bmw); }
+.viewer-hint { font-size: .7rem; color: var(--text-3); letter-spacing: .05em; }
+
+.viewer-sep {
+  width: 1px; background: var(--border); flex-shrink: 0; z-index: 2;
+}
+
+.viewer-glow {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 2px; border-radius: 2px; z-index: 1;
+}
+.benz-glow { background: linear-gradient(90deg, transparent, var(--benz), transparent); }
+.bmw-glow  { background: linear-gradient(90deg, transparent, var(--bmw),  transparent); }
+
+/* ── PERFORMANCE ─────────────────────────────────────────── */
+#performance { background: var(--surface); }
+
+.perf-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+}
+
+.perf-item {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px;
+}
+.perf-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px;
+}
+.perf-name { font-size: .85rem; font-weight: 500; }
+.perf-name em { color: var(--text-3); font-style: normal; font-size: .75rem; }
+
+.perf-tag {
+  font-family: var(--font-head); font-size: .65rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px;
+}
+.equal-tag { background: rgba(61,186,110,0.15); color: var(--green); }
+.benz-tag  { background: var(--benz-glow-2);  color: var(--benz); }
+.bmw-tag   { background: var(--bmw-glow-2);   color: var(--bmw); }
+
+.perf-bar-group { display: flex; flex-direction: column; gap: 10px; }
+.pbr { display: flex; align-items: center; gap: 10px; }
+.pbr-brand { font-size: .72rem; color: var(--text-3); width: 42px; flex-shrink: 0; }
+
+.pbr-track {
+  flex: 1; height: 6px; background: var(--surface);
+  border-radius: 3px; overflow: hidden;
+}
+.pbr-fill {
+  height: 100%; width: 0; border-radius: 3px;
+  transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.benz-pbr .pbr-fill { background: linear-gradient(90deg, var(--benz-dark), var(--benz)); }
+.bmw-pbr  .pbr-fill { background: linear-gradient(90deg, var(--bmw-dark),  var(--bmw)); }
+
+.pbr-val { font-size: .75rem; font-weight: 600; width: 78px; flex-shrink: 0; text-align: right; }
+.benz-pbr .pbr-val { color: var(--benz); }
+.bmw-pbr  .pbr-val { color: var(--bmw); }
+
+/* ── FEATURES ────────────────────────────────────────────── */
+#features { background: var(--bg); }
+
+.feat-tabs {
+  display: flex; gap: 8px; justify-content: center;
+  margin-bottom: 40px; flex-wrap: wrap;
+}
+.ftab {
+  padding: 9px 20px;
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 8px; cursor: pointer;
+  font-family: var(--font-body); font-size: .82rem; font-weight: 500;
+  color: var(--text-3);
+  transition: all 0.2s var(--ease);
+}
+.ftab:hover { border-color: var(--border-hi); color: var(--text-1); }
+.ftab.active {
+  background: var(--surface);
+  border-color: var(--border-hi);
+  color: var(--text-1);
+}
+
+.feat-panels { position: relative; }
+.feat-panel { display: none; }
+.feat-panel.active { display: block; }
+
+.fcol-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.fcol {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 28px;
+}
+.benz-fcol { border-top: 2px solid var(--benz-dark); }
+.bmw-fcol  { border-top: 2px solid var(--bmw-dark); }
+
+.fcol h3 {
+  font-family: var(--font-head); font-size: .9rem; font-weight: 700;
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 8px;
+}
+.benz-dot { color: var(--benz); }
+.bmw-dot  { color: var(--bmw); }
+
+.fcol ul { display: flex; flex-direction: column; gap: 8px; }
+.fitem {
+  font-size: .84rem; color: var(--text-2);
+  padding: 8px 12px; border-radius: 6px;
+  border-left: 2px solid transparent;
+  background: rgba(255,255,255,0.02);
+  transition: background 0.2s, border-color 0.2s;
+}
+.fitem:hover { background: rgba(255,255,255,0.05); }
+.benz-fcol .fitem.advantage {
+  color: var(--text-1); border-left-color: var(--benz);
+  background: var(--benz-glow-2);
+}
+.bmw-fcol .fitem.advantage {
+  color: var(--text-1); border-left-color: var(--bmw);
+  background: var(--bmw-glow-2);
+}
+
+/* ── SPEC TABLE ──────────────────────────────────────────── */
+#specs { background: var(--surface); }
+
+.spec-scroll { overflow-x: auto; border-radius: 12px; }
+.spec-table {
+  width: 100%; border-collapse: collapse;
+  min-width: 640px;
+}
+.spec-table th, .spec-table td {
+  padding: 12px 16px; text-align: left; font-size: .84rem;
+}
+.spec-table thead th {
+  background: var(--surface-2); border-bottom: 1px solid var(--border-hi);
+  font-family: var(--font-head); font-weight: 600;
+}
+.spec-cat-head { color: var(--text-3); width: 200px; }
+.benz-head { color: var(--benz); }
+.bmw-head  { color: var(--bmw);  }
+.benz-head small { color: var(--text-3); font-weight: 400; font-size: .75rem; }
+.bmw-head  small { color: var(--text-3); font-weight: 400; font-size: .75rem; }
+
+.spec-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+.spec-table tbody tr:hover { background: rgba(255,255,255,0.025); }
+.spec-table tbody td:first-child { color: var(--text-3); font-size: .8rem; }
+
+.group-row td {
+  font-family: var(--font-head); font-size: .68rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--text-3);
+  background: var(--surface-2) !important;
+  padding-top: 14px; padding-bottom: 14px;
+}
+
+.benz-win { color: var(--benz); font-weight: 600; }
+.bmw-win  { color: var(--bmw);  font-weight: 600; }
+
+/* ── PRICE ───────────────────────────────────────────────── */
+#price { background: var(--bg); }
+
+.price-arena {
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  gap: 32px; align-items: center;
+}
+.price-card {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px;
+  text-align: center;
+  transition: transform 0.3s var(--spring), box-shadow 0.3s;
+}
+.price-card:hover { transform: translateY(-4px); }
+.benz-price-card:hover { box-shadow: 0 20px 60px var(--benz-glow-2); border-color: var(--benz-dark); }
+.bmw-price-card:hover  { box-shadow: 0 20px 60px var(--bmw-glow-2);  border-color: var(--bmw-dark); }
+
+.price-maker { font-size: .75rem; letter-spacing: .12em; color: var(--text-3); margin-bottom: 4px; }
+.price-name  { font-family: var(--font-head); font-size: .9rem; font-weight: 600; margin-bottom: 20px; }
+
+.price-num { margin-bottom: 24px; }
+.pn-amount {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+}
+.benz-price-card .pn-amount { color: var(--benz); }
+.bmw-price-card  .pn-amount { color: var(--bmw); }
+.pn-unit { font-family: var(--font-head); font-size: 1rem; color: var(--text-2); margin-left: 2px; }
+
+.price-pros { display: flex; flex-direction: column; gap: 8px; text-align: left; }
+.price-pros li {
+  font-size: .82rem; padding: 6px 10px; border-radius: 6px;
+  display: flex; align-items: center; gap: 8px;
+}
+.price-pros li::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.price-pros li.pro { color: var(--text-2); background: rgba(255,255,255,0.02); }
+.price-pros li.pro::before { background: var(--green); }
+.price-pros li.con { color: var(--text-3); }
+.price-pros li.con::before { background: var(--text-3); }
+
+.price-gap {
+  text-align: center; padding: 20px; flex-shrink: 0;
+}
+.price-gap-num {
+  font-family: var(--font-head); font-size: 1.5rem; font-weight: 800;
+  color: var(--text-1); margin-bottom: 4px;
+}
+.price-gap-label { font-size: .72rem; color: var(--text-3); letter-spacing: .08em; margin-bottom: 12px; }
+.price-gap-arrow {
+  font-family: var(--font-head); font-size: .7rem; font-weight: 600;
+  color: var(--bmw); letter-spacing: .06em;
+  background: var(--bmw-glow-2); padding: 5px 10px; border-radius: 20px;
+}
+
+/* ── VERDICT ─────────────────────────────────────────────── */
+#verdict { background: var(--surface); }
+
+.verdict-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px; margin-bottom: 48px;
+}
+.verdict-card {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px;
+  transition: border-color 0.3s;
+}
+.benz-verdict { border-top: 3px solid var(--benz); }
+.bmw-verdict  { border-top: 3px solid var(--bmw); }
+
+.vc-icon {
+  font-size: 1.5rem; margin-bottom: 16px;
+  display: block;
+}
+.benz-verdict .vc-icon { color: var(--benz); }
+.bmw-verdict  .vc-icon { color: var(--bmw); }
+
+.verdict-card h3 {
+  font-family: var(--font-head); font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 4px;
+}
+.vc-sub { font-size: .78rem; color: var(--text-3); margin-bottom: 16px; }
+
+.verdict-card ul { display: flex; flex-direction: column; gap: 8px; }
+.verdict-card li {
+  font-size: .85rem; color: var(--text-2);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.verdict-card li::before { content: '→'; color: var(--text-3); flex-shrink: 0; }
+.benz-verdict li::before { color: var(--benz-dark); }
+.bmw-verdict  li::before { color: var(--bmw-dark); }
+.verdict-card li:last-child { border-bottom: none; }
+.verdict-card li em { color: var(--text-3); font-style: italic; margin-left: 4px; }
+
+.verdict-summary {
+  background: var(--surface-2); border: 1px solid var(--border-hi);
+  border-radius: 16px; overflow: hidden;
+}
+.vs-inner { padding: 40px; }
+.vs-inner h3 {
+  font-family: var(--font-head); font-size: 1rem; font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--benz), var(--bmw));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.vs-inner p {
+  color: var(--text-2); font-size: .9rem; line-height: 1.8;
+  margin-bottom: 12px;
+}
+.vs-inner p:last-child { margin-bottom: 0; }
+.vs-inner strong { color: var(--text-1); font-weight: 600; }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer { background: var(--surface); border-top: 1px solid var(--border); padding: 48px 0; }
+.footer-inner { text-align: center; }
+.footer-title {
+  font-family: var(--font-head); font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 6px;
+}
+.footer-title span { color: var(--text-3); margin: 0 8px; }
+.footer-sub { font-size: .8rem; color: var(--text-3); margin-bottom: 16px; }
+.footer-note { font-size: .72rem; color: var(--text-3); max-width: 500px; margin: 0 auto 16px; line-height: 1.6; }
+.footer-brands { font-family: var(--font-head); font-size: .75rem; color: var(--text-3); letter-spacing: .08em; }
+.fb-sep { margin: 0 10px; }
+
+/* ── AOS (hand-rolled) ───────────────────────────────────── */
+[data-aos] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+[data-aos].aos-in { opacity: 1; transform: none; }
+[data-aos="fade-right"] { transform: translateX(-24px); }
+[data-aos="fade-right"].aos-in { transform: none; }
+[data-aos="fade-left"]  { transform: translateX(24px); }
+[data-aos="fade-left"].aos-in  { transform: none; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .overview-grid { grid-template-columns: 1fr; }
+  .ov-shared { min-width: unset; width: 100%; order: -1; }
+  .ov-stats  { grid-template-columns: repeat(4, 1fr); }
+
+  .price-arena { grid-template-columns: 1fr; gap: 20px; }
+  .price-gap { display: flex; align-items: center; gap: 16px; justify-content: center; }
+  .price-gap-label { display: none; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 56px; }
+  section { padding: 70px 0; }
+
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+
+  .hero-split { flex-direction: column; gap: 8px; }
+  .hero-side { transform: translateX(0) !important; }
+  .hero-divider { width: 100%; }
+  .hero-vs { width: 42px; height: 42px; font-size: .65rem; }
+
+  .overview-grid { gap: 20px; }
+  .ov-stats { grid-template-columns: 1fr 1fr; }
+
+  .viewer-wrap { flex-direction: column; height: auto; }
+  .viewer-half { height: 320px; }
+  .viewer-sep  { width: 100%; height: 1px; }
+
+  .perf-grid { grid-template-columns: 1fr; }
+
+  .fcol-wrap { grid-template-columns: 1fr; }
+
+  .verdict-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .ht-stats { font-size: .7rem; }
+  .hs-model { font-size: 3rem; }
+
+  .feat-tabs { gap: 6px; }
+  .ftab { padding: 7px 12px; font-size: .76rem; }
+
+  .ov-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .ov-val   { font-size: 1.2rem; }
+}
+
+/* ── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+/* ── SELECTION ───────────────────────────────────────────── */
+::selection { background: var(--benz-glow); color: var(--text-1); }

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="메르세데스-벤츠 E 300 4MATIC AMG Line vs BMW 530i M Sport xDrive — 2026 프리미엄 세단 교육 비교" />
+  <title>E 300 AMG Line vs 530i M Sport | 프리미엄 세단 배틀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── LOADING SCREEN ──────────────────────────────────────────── -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logos">
+      <span class="loader-star">✦</span>
+      <span class="loader-vs">VS</span>
+      <span class="loader-circle">◎</span>
+    </div>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+    <p class="loader-label">Premium Sedan Battle · 2026</p>
+  </div>
+</div>
+
+<!-- ── NAVIGATION ──────────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="nav-wrap">
+    <div class="nav-brand">
+      <span class="nb-benz">Mercedes-Benz</span>
+      <span class="nb-vs">vs</span>
+      <span class="nb-bmw">BMW</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#overview">개요</a></li>
+      <li><a href="#viewer">3D</a></li>
+      <li><a href="#performance">성능</a></li>
+      <li><a href="#features">기능</a></li>
+      <li><a href="#specs">제원표</a></li>
+      <li><a href="#price">가격</a></li>
+      <li><a href="#verdict">총평</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-progress-bar" id="navProgress"></div>
+</nav>
+
+<!-- ── MOBILE MENU ─────────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#overview" class="mm-link">개요</a></li>
+    <li><a href="#viewer" class="mm-link">3D 뷰어</a></li>
+    <li><a href="#performance" class="mm-link">성능 비교</a></li>
+    <li><a href="#features" class="mm-link">주요 기능</a></li>
+    <li><a href="#specs" class="mm-link">상세 제원</a></li>
+    <li><a href="#price" class="mm-link">가격 비교</a></li>
+    <li><a href="#verdict" class="mm-link">총평</a></li>
+  </ul>
+</div>
+
+<!-- ── HERO ───────────────────────────────────────────────────── -->
+<section id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-split">
+      <div class="hero-side hero-benz" data-aos="fade-right">
+        <div class="hs-brand">MERCEDES-BENZ</div>
+        <div class="hs-model">E 300</div>
+        <div class="hs-trim">4MATIC AMG Line</div>
+        <div class="hs-year">W214 · 2026 MY</div>
+      </div>
+      <div class="hero-divider">
+        <div class="hero-vs">VS</div>
+      </div>
+      <div class="hero-side hero-bmw" data-aos="fade-left">
+        <div class="hs-brand">BMW</div>
+        <div class="hs-model">530i</div>
+        <div class="hs-trim">M Sport xDrive</div>
+        <div class="hs-year">G60 · 2026 MY</div>
+      </div>
+    </div>
+    <div class="hero-tagline" data-aos="fade-up">
+      <p class="ht-main">같은 숫자, 다른 철학</p>
+      <div class="ht-stats">
+        <span>258 마력</span>
+        <span class="dot">·</span>
+        <span>0→100km/h 6.1초</span>
+        <span class="dot">·</span>
+        <span>복합연비 11.1km/L</span>
+        <span class="dot">·</span>
+        <span>공차중량 1,905kg</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── OVERVIEW ───────────────────────────────────────────────── -->
+<section id="overview">
+  <div class="container">
+    <div class="sec-header" data-aos="fade-up">
+      <span class="sec-label">OVERVIEW</span>
+      <h2>두 차의 핵심 제원</h2>
+      <p>동급 최강의 럭셔리 세단, 핵심 수치로 비교합니다</p>
+    </div>
+
+    <div class="overview-grid">
+      <!-- BENZ card -->
+      <div class="ov-card benz-card" data-aos="fade-right">
+        <div class="ov-head">
+          <div class="ov-badge benz-badge">✦</div>
+          <div>
+            <div class="ov-maker">Mercedes-Benz</div>
+            <div class="ov-model">E 300 4MATIC AMG Line</div>
+            <div class="ov-code">W214 · 2026 Model Year</div>
+          </div>
+        </div>
+        <div class="ov-stats">
+          <div class="ov-stat">
+            <span class="ov-val">9,770<sub>만원</sub></span>
+            <span class="ov-lbl">판매 가격</span>
+          </div>
+          <div class="ov-stat">
+            <span class="ov-val">258<sub>hp</sub></span>
+            <span class="ov-lbl">최고 출력</span>
+          </div>
+          <div class="ov-stat">
+            <span class="ov-val">6.1<sub>초</sub></span>
+            <span class="ov-lbl">0→100km/h</span>
+          </div>
+          <div class="ov-stat">
+            <span class="ov-val">540<sub>L</sub></span>
+            <span class="ov-lbl">트렁크 용량</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHARED center -->
+      <div class="ov-shared" data-aos="fade-up">
+        <h3>공통 사양</h3>
+        <ul class="shared-list">
+          <li><span>최고 출력</span><span>258 hp</span></li>
+          <li><span>최대 토크</span><span>40.8 kgm</span></li>
+          <li><span>0→100km/h</span><span>6.1 초</span></li>
+          <li><span>최고 속도</span><span>250 km/h</span></li>
+          <li><span>공차 중량</span><span>1,905 kg</span></li>
+          <li><span>복합 연비</span><span>11.1 km/L</span></li>
+          <li><span>연비 등급</span><span>4등급</span></li>
+          <li><span>구동 방식</span><span>AWD</span></li>
+          <li><span>배기량</span><span>1,999 cc</span></li>
+          <li><span>엔진 구성</span><span>직렬 4기통 Mild Hybrid</span></li>
+        </ul>
+      </div>
+
+      <!-- BMW card -->
+      <div class="ov-card bmw-card" data-aos="fade-left">
+        <div class="ov-head">
+          <div class="ov-badge bmw-badge">◎</div>
+          <div>
+            <div class="ov-maker">BMW</div>
+            <div class="ov-model">530i M Sport xDrive P1</div>
+            <div class="ov-code">G60 · 2026 Model Year</div>
+          </div>
+        </div>
+        <div class="ov-stats">
+          <div class="ov-stat">
+            <span class="ov-val">8,900<sub>만원</sub></span>
+            <span class="ov-lbl">판매 가격</span>
+          </div>
+          <div class="ov-stat">
+            <span class="ov-val">258<sub>hp</sub></span>
+            <span class="ov-lbl">최고 출력</span>
+          </div>
+          <div class="ov-stat">
+            <span class="ov-val">6.1<sub>초</sub></span>
+            <span class="ov-lbl">0→100km/h</span>
+          </div>
+          <div class="ov-stat">
+            <span class="ov-val">520<sub>L</sub></span>
+            <span class="ov-lbl">트렁크 용량</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 3D VIEWER ──────────────────────────────────────────────── -->
+<section id="viewer">
+  <div class="container">
+    <div class="sec-header" data-aos="fade-up">
+      <span class="sec-label">3D VIEWER</span>
+      <h2>인터랙티브 3D 뷰어</h2>
+      <p>마우스를 드래그하여 차량을 360° 회전시켜보세요</p>
+    </div>
+  </div>
+  <div class="viewer-wrap">
+    <div class="viewer-half viewer-benz">
+      <canvas id="benzCanvas"></canvas>
+      <div class="viewer-overlay">
+        <div class="viewer-car-name">E 300 AMG Line</div>
+        <div class="viewer-hint">← 드래그하여 회전</div>
+      </div>
+      <div class="viewer-glow benz-glow"></div>
+    </div>
+    <div class="viewer-sep"></div>
+    <div class="viewer-half viewer-bmw">
+      <canvas id="bmwCanvas"></canvas>
+      <div class="viewer-overlay">
+        <div class="viewer-car-name">530i M Sport</div>
+        <div class="viewer-hint">드래그하여 회전 →</div>
+      </div>
+      <div class="viewer-glow bmw-glow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PERFORMANCE ────────────────────────────────────────────── -->
+<section id="performance">
+  <div class="container">
+    <div class="sec-header" data-aos="fade-up">
+      <span class="sec-label">PERFORMANCE</span>
+      <h2>퍼포먼스 비교</h2>
+      <p>숫자로 보는 두 차의 성능 차이</p>
+    </div>
+
+    <div class="perf-grid" data-aos="fade-up">
+
+      <div class="perf-item">
+        <div class="perf-header">
+          <span class="perf-name">최고 출력 <em>(hp)</em></span>
+          <span class="perf-tag equal-tag">동일</span>
+        </div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr">
+            <span class="pbr-brand">E 300</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="86"></div></div>
+            <span class="pbr-val">258 hp</span>
+          </div>
+          <div class="pbr bmw-pbr">
+            <span class="pbr-brand">530i</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="86"></div></div>
+            <span class="pbr-val">258 hp</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="perf-item">
+        <div class="perf-header">
+          <span class="perf-name">최대 토크 <em>(kgm)</em></span>
+          <span class="perf-tag equal-tag">동일</span>
+        </div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr">
+            <span class="pbr-brand">E 300</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="76"></div></div>
+            <span class="pbr-val">40.8 kgm</span>
+          </div>
+          <div class="pbr bmw-pbr">
+            <span class="pbr-brand">530i</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="76"></div></div>
+            <span class="pbr-val">40.8 kgm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="perf-item">
+        <div class="perf-header">
+          <span class="perf-name">0→100km/h <em>(초)</em></span>
+          <span class="perf-tag equal-tag">동일</span>
+        </div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr">
+            <span class="pbr-brand">E 300</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="79"></div></div>
+            <span class="pbr-val">6.1 초</span>
+          </div>
+          <div class="pbr bmw-pbr">
+            <span class="pbr-brand">530i</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="79"></div></div>
+            <span class="pbr-val">6.1 초</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="perf-item">
+        <div class="perf-header">
+          <span class="perf-name">복합 연비 <em>(km/L)</em></span>
+          <span class="perf-tag equal-tag">동일</span>
+        </div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr">
+            <span class="pbr-brand">E 300</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="55"></div></div>
+            <span class="pbr-val">11.1 km/L</span>
+          </div>
+          <div class="pbr bmw-pbr">
+            <span class="pbr-brand">530i</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="55"></div></div>
+            <span class="pbr-val">11.1 km/L</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="perf-item">
+        <div class="perf-header">
+          <span class="perf-name">트렁크 용량 <em>(L)</em></span>
+          <span class="perf-tag benz-tag">벤츠 우세</span>
+        </div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr">
+            <span class="pbr-brand">E 300</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="85"></div></div>
+            <span class="pbr-val">540 L ★</span>
+          </div>
+          <div class="pbr bmw-pbr">
+            <span class="pbr-brand">530i</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="80"></div></div>
+            <span class="pbr-val">520 L</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="perf-item">
+        <div class="perf-header">
+          <span class="perf-name">축거 <em>(mm · 뒷좌석 공간)</em></span>
+          <span class="perf-tag bmw-tag">BMW 우세</span>
+        </div>
+        <div class="perf-bar-group">
+          <div class="pbr benz-pbr">
+            <span class="pbr-brand">E 300</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="85"></div></div>
+            <span class="pbr-val">2,960 mm</span>
+          </div>
+          <div class="pbr bmw-pbr">
+            <span class="pbr-brand">530i</span>
+            <div class="pbr-track"><div class="pbr-fill" data-w="89"></div></div>
+            <span class="pbr-val">2,995 mm ★</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ───────────────────────────────────────────────── -->
+<section id="features">
+  <div class="container">
+    <div class="sec-header" data-aos="fade-up">
+      <span class="sec-label">FEATURES</span>
+      <h2>주요 기능 비교</h2>
+      <p>세부 사양과 특화 기능을 카테고리별로 비교</p>
+    </div>
+
+    <div class="feat-tabs" data-aos="fade-up">
+      <button class="ftab active" data-tab="exterior">외장 디자인</button>
+      <button class="ftab" data-tab="interior">실내/편의</button>
+      <button class="ftab" data-tab="tech">기술/인포테인먼트</button>
+      <button class="ftab" data-tab="safety">안전</button>
+    </div>
+
+    <div class="feat-panels">
+
+      <!-- EXTERIOR -->
+      <div class="feat-panel active" id="fpanel-exterior" data-aos="fade-up">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
+            <ul>
+              <li class="fitem advantage">디지털 라이트 & 어댑티브 상향등 어시스트 플러스</li>
+              <li class="fitem">AMG 라인 익스테리어</li>
+              <li class="fitem">19" AMG 투톤 5트윈스포크 알로이 휠 (RTE)</li>
+              <li class="fitem advantage">발광 라디에이터 그릴</li>
+              <li class="fitem advantage">발광 도어실 패널</li>
+              <li class="fitem">파노라믹 선루프</li>
+              <li class="fitem">브랜드 프로젝션 로고</li>
+              <li class="fitem advantage">프론트 액슬 대형 디스크 브레이크</li>
+              <li class="fitem">스포티 엔진 사운드</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
+            <ul>
+              <li class="fitem">어댑티브 LED 헤드라이트</li>
+              <li class="fitem advantage">M 하이글로스 쉐도우 라인 익스테리어</li>
+              <li class="fitem advantage">20" 938M 바이컬러 젯 블랙 휠</li>
+              <li class="fitem advantage">Iconic Glow 키드니 그릴 (발광)</li>
+              <li class="fitem advantage">M Sport 브레이크</li>
+              <li class="fitem">파노라마 선루프</li>
+              <li class="fitem advantage">리어 스포일러</li>
+              <li class="fitem">새틴 알루미늄 익스테리어 디자인</li>
+              <li class="fitem advantage">하이빔 어시스턴트</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERIOR -->
+      <div class="feat-panel" id="fpanel-interior">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
+            <ul>
+              <li class="fitem advantage">나파가죽 다기능 스포츠 스티어링 휠 (열선)</li>
+              <li class="fitem">블랙 피아노 라커 트림</li>
+              <li class="fitem">가죽 스포츠 시트 (221A)</li>
+              <li class="fitem advantage">액티브 엠비언트 라이트 (64색)</li>
+              <li class="fitem advantage">부메스터 4D 서라운드 사운드 ★</li>
+              <li class="fitem">앞좌석 메모리/열선/통풍 시트</li>
+              <li class="fitem">뒷좌석 열선</li>
+              <li class="fitem">블랙 루프라이너</li>
+              <li class="fitem">2존 에어컨 + 공기청정 패키지</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
+            <ul>
+              <li class="fitem advantage">M 레더 스티어링 휠 (열선)</li>
+              <li class="fitem advantage">M 알루미늄 룸비클 인테리어 트림</li>
+              <li class="fitem advantage">메리노 가죽 시트 (최상급 소재)</li>
+              <li class="fitem">앰비언트 라이트 (인터렉션 바 포함)</li>
+              <li class="fitem">하만카돈 하이파이 사운드</li>
+              <li class="fitem">앞좌석 메모리/열선/통풍 시트</li>
+              <li class="fitem">뒷좌석 열선</li>
+              <li class="fitem advantage">M 앤트러사이트 헤드라이너</li>
+              <li class="fitem advantage">4존 에어컨 (독립 온도 조절) ★</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECH -->
+      <div class="feat-panel" id="fpanel-tech">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
+            <ul>
+              <li class="fitem advantage">MBUX 슈퍼스크린 (대형 통합 디스플레이) ★</li>
+              <li class="fitem advantage">증강현실 내비게이션 + HUD</li>
+              <li class="fitem advantage">셀피/비디오 카메라 내장</li>
+              <li class="fitem advantage">MBUX 엔터테인먼트 플러스 (줌 등)</li>
+              <li class="fitem">360도 카메라 & 액티브 주차어시스트</li>
+              <li class="fitem">스마트폰 디지털 키 + 디지털 키 전달</li>
+              <li class="fitem">무선 안드로이드 오토/애플 카플레이</li>
+              <li class="fitem">앞좌석 무선 충전</li>
+              <li class="fitem">키레스 고 + 전동 트렁크 + 핸즈프리 액세스</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
+            <ul>
+              <li class="fitem advantage">12.3" + 14.9" 듀얼 스크린 + HUD</li>
+              <li class="fitem advantage">BMW 라이브 콕핏 프로페셔널</li>
+              <li class="fitem advantage">제스처 컨트롤</li>
+              <li class="fitem advantage">리모트 엔진 스타트 (원격 시동)</li>
+              <li class="fitem advantage">서라운드 뷰 카메라 + 주차 보조</li>
+              <li class="fitem advantage">BMW 디지털 키 플러스</li>
+              <li class="fitem">스마트폰 무선충전</li>
+              <li class="fitem advantage">BSI 프리미엄 (5년/10만km 무상유지) ★</li>
+              <li class="fitem">컴포트 액세스 + 전동 트렁크</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAFETY -->
+      <div class="feat-panel" id="fpanel-safety">
+        <div class="fcol-wrap">
+          <div class="fcol benz-fcol">
+            <h3><span class="benz-dot">✦</span> E 300 AMG Line</h3>
+            <ul>
+              <li class="fitem advantage">에어백 10개 ★ (운전석/동반석/무릎/센터/창문/앞뒤사이드)</li>
+              <li class="fitem">P20 드라이빙 어시스턴트 패키지 플러스</li>
+              <li class="fitem advantage">프리-세이프 시스템 (총 4종)</li>
+              <li class="fitem advantage">충돌회피 조향어시스트</li>
+              <li class="fitem">액티브 사각지대 어시스트</li>
+              <li class="fitem">액티브 스티어링 어시스트</li>
+              <li class="fitem">Active Bonnet (보행자 보호)</li>
+              <li class="fitem advantage">경로기반 속도조절</li>
+              <li class="fitem">STOP & GO 기능 포함</li>
+            </ul>
+          </div>
+          <div class="fcol bmw-fcol">
+            <h3><span class="bmw-dot">◎</span> 530i M Sport</h3>
+            <ul>
+              <li class="fitem">에어백 다수 (커튼형 포함)</li>
+              <li class="fitem advantage">드라이빙 어시스턴트 프로페셔널</li>
+              <li class="fitem advantage">파킹 어시스턴트 플러스</li>
+              <li class="fitem">액티브 크루즈 컨트롤 (Stop&Go)</li>
+              <li class="fitem">스티어링 & 차선유지 어시스트</li>
+              <li class="fitem">차선변경 & 사각지대 경고</li>
+              <li class="fitem advantage">후방 충돌 경고</li>
+              <li class="fitem advantage">교차로 경고</li>
+              <li class="fitem advantage">액티브 프로텍션</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SPEC TABLE ─────────────────────────────────────────────── -->
+<section id="specs">
+  <div class="container">
+    <div class="sec-header" data-aos="fade-up">
+      <span class="sec-label">SPECIFICATIONS</span>
+      <h2>상세 제원 비교표</h2>
+    </div>
+    <div class="spec-scroll" data-aos="fade-up">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th class="spec-cat-head">항목</th>
+            <th class="benz-head"><span>Mercedes-Benz</span><br/><small>E 300 4MATIC AMG Line</small></th>
+            <th class="bmw-head"><span>BMW</span><br/><small>530i M Sport xDrive P1</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="3">기본 정보</td></tr>
+          <tr><td>가격</td><td>9,770만원</td><td class="bmw-win">8,900만원 ★</td></tr>
+          <tr><td>차량 코드</td><td>W214</td><td>G60</td></tr>
+          <tr><td>변속기</td><td>9G-Tronic (9단)</td><td>스텝트로닉 스포츠 (8단)</td></tr>
+          <tr><td>구동 방식</td><td>4MATIC (사륜)</td><td>xDrive (사륜)</td></tr>
+
+          <tr class="group-row"><td colspan="3">엔진 & 성능</td></tr>
+          <tr><td>엔진</td><td>M254, 직렬4기통 Mild Hybrid</td><td>B48, 직렬4기통 48V Mild Hybrid</td></tr>
+          <tr><td>배기량</td><td>1,999 cc</td><td>1,998 cc</td></tr>
+          <tr><td>최고 출력</td><td>258 hp / 5,800 rpm</td><td>258 hp / 4,600–6,500 rpm</td></tr>
+          <tr><td>최대 토크</td><td>40.8 kgm / 2,000–3,200 rpm</td><td>40.8 kgm / 1,600–4,500 rpm</td></tr>
+          <tr><td>0→100km/h</td><td>6.1 초</td><td>6.1 초</td></tr>
+          <tr><td>최고 속도</td><td>250 km/h</td><td>250 km/h</td></tr>
+          <tr><td>복합 연비</td><td>11.1 km/L (4등급)</td><td>11.1 km/L (4등급)</td></tr>
+          <tr><td>연료 탱크</td><td>66 L</td><td>60 L</td></tr>
+
+          <tr class="group-row"><td colspan="3">차체 & 크기</td></tr>
+          <tr><td>전장</td><td>4,955 mm</td><td class="bmw-win">5,060 mm ★</td></tr>
+          <tr><td>전폭</td><td>1,880 mm</td><td class="bmw-win">1,900 mm ★</td></tr>
+          <tr><td>전고</td><td>1,475 mm</td><td class="bmw-win">1,515 mm ★</td></tr>
+          <tr><td>축거 (뒷좌석)</td><td>2,960 mm</td><td class="bmw-win">2,995 mm ★</td></tr>
+          <tr><td>공차 중량</td><td>1,905 kg</td><td>1,905 kg</td></tr>
+          <tr><td>트렁크 용량</td><td class="benz-win">540 L ★</td><td>520 L</td></tr>
+          <tr><td>타이어 (전/후)</td><td>245/45 R19 / 275/40 R19</td><td class="bmw-win">245/40 R20 / 275/35 R20 ★</td></tr>
+
+          <tr class="group-row"><td colspan="3">인포테인먼트 & 편의</td></tr>
+          <tr><td>디스플레이</td><td class="benz-win">MBUX 슈퍼스크린 + HUD ★</td><td>12.3" + 14.9" 듀얼 + HUD</td></tr>
+          <tr><td>사운드 시스템</td><td class="benz-win">부메스터 4D 서라운드 ★</td><td>하만카돈 하이파이</td></tr>
+          <tr><td>에어컨</td><td>2존</td><td class="bmw-win">4존 독립 ★</td></tr>
+          <tr><td>시트 소재</td><td>아티코 가죽</td><td class="bmw-win">메리노 가죽 (최상급) ★</td></tr>
+          <tr><td>헤드라이트</td><td class="benz-win">디지털 라이트 ★</td><td>어댑티브 LED</td></tr>
+          <tr><td>에어백</td><td class="benz-win">10개 ★</td><td>다수 (커튼형 포함)</td></tr>
+          <tr><td>BSI 유지관리</td><td>—</td><td class="bmw-win">5년 / 10만km ★</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICE ──────────────────────────────────────────────────── -->
+<section id="price">
+  <div class="container">
+    <div class="sec-header" data-aos="fade-up">
+      <span class="sec-label">PRICE</span>
+      <h2>가격 비교</h2>
+      <p>870만원의 차이가 의미하는 것</p>
+    </div>
+    <div class="price-arena" data-aos="fade-up">
+      <div class="price-card benz-price-card">
+        <div class="price-maker">Mercedes-Benz</div>
+        <div class="price-name">E 300 4MATIC AMG Line</div>
+        <div class="price-num"><span class="pn-amount" data-target="9770">0</span><span class="pn-unit">만원</span></div>
+        <ul class="price-pros">
+          <li class="pro">부메스터 4D 서라운드 사운드</li>
+          <li class="pro">MBUX 슈퍼스크린</li>
+          <li class="pro">디지털 라이트</li>
+          <li class="pro">에어백 10개</li>
+          <li class="pro">발광 도어실 패널</li>
+          <li class="con">4존 에어컨 없음</li>
+          <li class="con">BSI 무상유지 미포함</li>
+        </ul>
+      </div>
+
+      <div class="price-gap">
+        <div class="price-gap-num">870만원</div>
+        <div class="price-gap-label">차이</div>
+        <div class="price-gap-arrow">BMW가 저렴</div>
+      </div>
+
+      <div class="price-card bmw-price-card">
+        <div class="price-maker">BMW</div>
+        <div class="price-name">530i M Sport xDrive P1</div>
+        <div class="price-num"><span class="pn-amount" data-target="8900">0</span><span class="pn-unit">만원</span></div>
+        <ul class="price-pros">
+          <li class="pro">BSI 프리미엄 5년/10만km</li>
+          <li class="pro">4존 에어컨</li>
+          <li class="pro">20" M Sport 휠</li>
+          <li class="pro">메리노 가죽 시트</li>
+          <li class="pro">제스처 컨트롤</li>
+          <li class="con">하만카돈 (부메스터 미만)</li>
+          <li class="con">MBUX 슈퍼스크린 없음</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VERDICT ────────────────────────────────────────────────── -->
+<section id="verdict">
+  <div class="container">
+    <div class="sec-header" data-aos="fade-up">
+      <span class="sec-label">VERDICT</span>
+      <h2>결론 & 총평</h2>
+      <p>어떤 차가 당신에게 맞을까요?</p>
+    </div>
+
+    <div class="verdict-grid" data-aos="fade-up">
+      <div class="verdict-card benz-verdict">
+        <div class="vc-icon">✦</div>
+        <h3>E 300 AMG Line 추천</h3>
+        <p class="vc-sub">이런 분께 어울립니다</p>
+        <ul>
+          <li>최고급 오디오를 원하는 분 <em>(부메스터 4D)</em></li>
+          <li>최신 디스플레이 기술 <em>(MBUX 슈퍼스크린)</em></li>
+          <li>안전에 최우선을 두는 분 <em>(에어백 10개)</em></li>
+          <li>넓은 트렁크가 필요한 분 <em>(540L)</em></li>
+          <li>프리미엄 독일 세단 감성을 원하는 분</li>
+        </ul>
+      </div>
+      <div class="verdict-card bmw-verdict">
+        <div class="vc-icon">◎</div>
+        <h3>530i M Sport 추천</h3>
+        <p class="vc-sub">이런 분께 어울립니다</p>
+        <ul>
+          <li>가성비를 중시하는 분 <em>(870만원 절약)</em></li>
+          <li>스포티한 드라이빙 감성 <em>(M Sport 튜닝)</em></li>
+          <li>장거리 편의성 <em>(4존 에어컨)</em></li>
+          <li>유지비 절감 <em>(BSI 5년/10만km)</em></li>
+          <li>넓은 뒷좌석 공간 <em>(축거 35mm 더 길음)</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="verdict-summary" data-aos="fade-up">
+      <div class="vs-inner">
+        <h3>핵심 교훈</h3>
+        <p>두 차는 <strong>0→100km/h 6.1초, 258마력, 복합연비 11.1km/L, 공차중량 1,905kg</strong>이 모두 동일합니다. 같은 성능의 두 차가 어떻게 다른 방향으로 진화했는지를 보여주는 완벽한 비교입니다.</p>
+        <p>메르세데스-벤츠는 <strong>오디오, 디스플레이, 안전 기술</strong>에서 프리미엄 우위를 유지하며 럭셔리의 정점을 추구합니다. BMW는 <strong>가격 경쟁력, 실내 공간, 무상 유지보수</strong>로 실용적 가치를 극대화합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-title">E 300 AMG Line <span>vs</span> 530i M Sport</div>
+      <div class="footer-sub">프리미엄 세단 교육 비교 · 2026 Model Year</div>
+      <div class="footer-note">* 상기 제원 및 가격은 출시 시점 기준이며 실제와 차이가 있을 수 있습니다. 본 사이트는 교육 목적으로 제작되었습니다.</div>
+      <div class="footer-brands">
+        <span>Mercedes-Benz Korea</span>
+        <span class="fb-sep">|</span>
+        <span>BMW Korea</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── SCRIPTS ────────────────────────────────────────────────── -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module" src="main.js"></script>
+</body>
+</html>

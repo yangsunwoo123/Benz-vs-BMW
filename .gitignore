@@ -1,0 +1,16 @@
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Temp extraction files
+*.txt
+!README.md
+
+# Large files / source docs
+*.pptx
+*.pdf
