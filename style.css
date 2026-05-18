@@ -62,8 +62,13 @@ canvas { display: block; }
   background: var(--bg);
   display: flex; align-items: center; justify-content: center;
   transition: opacity 0.6s var(--ease), visibility 0.6s;
+  /* CSS fallback: auto-hide after 3s even if JS fails */
+  animation: loader-auto-dismiss 0.6s ease 3s forwards;
 }
-#loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+@keyframes loader-auto-dismiss {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+#loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; animation: none; }
 
 .loader-inner { text-align: center; }
 .loader-logos {
