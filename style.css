@@ -486,6 +486,14 @@ canvas { display: block; }
 .fcol-wrap::-webkit-scrollbar { width: 4px; }
 .fcol-wrap::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 2px; }
 
+/* When feat-panels is inside a slide-body-scroll (not a flex-constrained slide-features),
+   let content grow naturally so the outer scroll handles everything */
+.slide-body-scroll .feat-panels { overflow: visible; height: auto; flex: none; }
+.slide-body-scroll .feat-panel  { height: auto; }
+.slide-body-scroll .fcol-wrap   { height: auto; overflow-y: visible; }
+/* 3D viewer tab still needs a defined height for the iframes */
+.slide-body-scroll #fpanel-design-3d .viewer-wrap { height: 60vh; min-height: 320px; }
+
 .fcol {
   background: var(--surface-2); border: 1px solid var(--border);
   border-radius: 10px; padding: 20px;
