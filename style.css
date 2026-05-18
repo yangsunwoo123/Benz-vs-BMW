@@ -68,12 +68,20 @@ canvas { display: block; }
 @keyframes loader-dismiss { to { opacity:0; visibility:hidden; pointer-events:none; } }
 #loader.hidden { opacity:0; visibility:hidden; pointer-events:none; animation:none; }
 
-.loader-inner { text-align: center; }
+.loader-inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .loader-logos {
-  display: flex; align-items: center; gap: 20px;
-  font-family: var(--font-head); font-size: 2.5rem; font-weight: 700;
-  margin-bottom: 32px;
+  display: flex; align-items: center; gap: 24px;
+  margin-bottom: 36px;
 }
+.loader-logo {
+  width: 80px; height: 80px;
+  border-radius: 50%; object-fit: contain;
+  background: rgba(255,255,255,0.95);
+  padding: 10px;
+  box-shadow: 0 0 32px rgba(255,255,255,0.12);
+}
+.loader-benz-logo { animation: pulse-benz 1.2s ease infinite; }
+.loader-bmw-logo  { animation: pulse-bmw  1.2s ease infinite 0.3s; }
 .loader-star   { color: var(--benz); animation: pulse-benz 1.2s ease infinite; }
 .loader-vs     { font-size: 1rem; color: var(--text-3); letter-spacing: .3em; }
 .loader-circle { color: var(--bmw); animation: pulse-bmw 1.2s ease infinite 0.3s; }
@@ -691,6 +699,7 @@ canvas { display: block; }
 }
 .footer-brands { font-family: var(--font-head); font-size: .72rem; color: var(--text-3); letter-spacing: .08em; margin-bottom: 8px; }
 .fb-sep { margin: 0 10px; }
+.footer-presenter { font-family: var(--font-head); font-size: .82rem; color: var(--benz); letter-spacing: .06em; font-weight: 600; margin-bottom: 8px; }
 .footer-note { font-size: .7rem; color: var(--text-3); line-height: 1.6; max-width: 480px; margin: 0 auto; }
 
 /* ── NAVIGATION DOTS ─────────────────────────────────── */
@@ -1086,15 +1095,42 @@ canvas { display: block; }
 }
 
 /* ── FONT SIZE INCREASES ────────────────────────────── */
-.iitem { font-size: .9rem; }
-.fitem { font-size: .9rem; }
-.brand-motto { font-size: .86rem; }
-.toc-desc { font-size: .85rem; }
-.iitem-year { font-size: .75rem; }
-.sec-header p { font-size: .95rem; }
-.perf-name { font-size: .88rem; }
-.pbr-val { font-size: .78rem; }
-.shared-list li { font-size: .83rem; }
+body { font-size: 16px; }
+.iitem { font-size: 1rem; }
+.fitem { font-size: 1rem; }
+.brand-motto { font-size: .92rem; }
+.toc-desc { font-size: .9rem; }
+.toc-title { font-size: clamp(1rem, 1.6vw, 1.25rem); }
+.iitem-year { font-size: .8rem; }
+.sec-header p { font-size: 1rem; }
+.sec-header h2 { font-size: clamp(1.6rem, 2.8vw, 2.6rem); }
+.perf-name { font-size: .92rem; }
+.pbr-brand { font-size: .78rem; }
+.pbr-val { font-size: .82rem; }
+.shared-list li { font-size: .88rem; }
+.spec-table th, .spec-table td { font-size: .86rem; }
+.verdict-card li { font-size: .9rem; }
+.price-pros li { font-size: .86rem; }
+.footer-note { font-size: .78rem; }
+
+/* ── LOGO STYLES ────────────────────────────────────── */
+.hero-logo-img {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: rgba(255,255,255,0.92);
+  padding: 10px;
+  display: block; margin: 0 auto 12px;
+}
+.nav-logo-img {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: rgba(255,255,255,0.9);
+  padding: 2px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
 
 /* ── FEATURE DETAIL RESPONSIVE ──────────────────────── */
 @media (max-width: 768px) {
