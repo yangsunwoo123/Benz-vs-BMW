@@ -203,19 +203,35 @@
   </div>
   <div class="viewer-wrap">
     <div class="viewer-half viewer-benz">
-      <canvas id="benzCanvas"></canvas>
-      <div class="viewer-overlay">
-        <div class="viewer-car-name">E 300 AMG Line</div>
-        <div class="viewer-hint">← 드래그하여 회전</div>
+      <iframe
+        class="viewer-frame"
+        title="2024 Mercedes-Benz E-Class AMG Line"
+        src="https://sketchfab.com/models/471ae365d79c488399ec04ca2c5bc51b/embed?autostart=1&ui_infos=0&ui_stop=0&autospin=0.3&dnt=1"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
+      <div class="viewer-caption viewer-benz-caption">
+        <span class="viewer-car-name">E 300 AMG Line</span>
+        <span class="viewer-brand-dot">✦</span>
+        <span class="viewer-brand-label">Mercedes-Benz W214</span>
       </div>
       <div class="viewer-glow benz-glow"></div>
     </div>
     <div class="viewer-sep"></div>
     <div class="viewer-half viewer-bmw">
-      <canvas id="bmwCanvas"></canvas>
-      <div class="viewer-overlay">
-        <div class="viewer-car-name">530i M Sport</div>
-        <div class="viewer-hint">드래그하여 회전 →</div>
+      <iframe
+        class="viewer-frame"
+        title="2024 BMW 5-Series G60"
+        src="https://sketchfab.com/models/ee328c2302494193a05cb4949b17ae55/embed?autostart=1&ui_infos=0&ui_stop=0&autospin=0.3&dnt=1"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
+      <div class="viewer-caption viewer-bmw-caption">
+        <span class="viewer-car-name">530i M Sport</span>
+        <span class="viewer-brand-dot">◎</span>
+        <span class="viewer-brand-label">BMW G60</span>
       </div>
       <div class="viewer-glow bmw-glow"></div>
     </div>
@@ -676,8 +692,6 @@
 </footer>
 
 <!-- ── SCRIPTS ────────────────────────────────────────────────── -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="main.js"></script>

@@ -369,34 +369,50 @@ section { padding: 100px 0; position: relative; }
 #viewer { background: var(--bg); padding-bottom: 60px; }
 
 .viewer-wrap {
-  display: flex; height: 480px; position: relative;
+  display: flex; height: 560px; position: relative;
   margin-top: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
-.viewer-half { flex: 1; position: relative; cursor: grab; }
-.viewer-half:active { cursor: grabbing; }
+.viewer-half {
+  flex: 1; position: relative;
+  display: flex; flex-direction: column;
+}
 
-#benzCanvas, #bmwCanvas { width: 100%; height: 100%; }
+.viewer-frame {
+  flex: 1; border: none; display: block; width: 100%;
+  min-height: 0;
+}
 
-.viewer-overlay {
-  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
-  text-align: center; pointer-events: none; z-index: 2;
+.viewer-caption {
+  display: flex; align-items: center; gap: 8px; justify-content: center;
+  padding: 10px 20px;
+  background: rgba(6,6,10,0.92);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
 }
 .viewer-car-name {
-  font-family: var(--font-head); font-size: .85rem; font-weight: 600;
-  letter-spacing: .1em; margin-bottom: 4px;
+  font-family: var(--font-head); font-size: .82rem; font-weight: 600;
+  letter-spacing: .1em;
 }
-.viewer-benz .viewer-car-name { color: var(--benz); }
-.viewer-bmw  .viewer-car-name { color: var(--bmw); }
-.viewer-hint { font-size: .7rem; color: var(--text-3); letter-spacing: .05em; }
+.viewer-benz-caption .viewer-car-name { color: var(--benz); }
+.viewer-bmw-caption  .viewer-car-name { color: var(--bmw); }
+
+.viewer-brand-dot { font-size: .85rem; }
+.viewer-benz-caption .viewer-brand-dot { color: var(--benz); }
+.viewer-bmw-caption  .viewer-brand-dot { color: var(--bmw); }
+
+.viewer-brand-label {
+  font-family: var(--font-head); font-size: .68rem;
+  letter-spacing: .12em; color: var(--text-3); text-transform: uppercase;
+}
 
 .viewer-sep {
   width: 1px; background: var(--border); flex-shrink: 0; z-index: 2;
 }
 
 .viewer-glow {
-  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 60%; height: 2px; border-radius: 2px; z-index: 1;
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 2px; border-radius: 2px; z-index: 3; pointer-events: none;
 }
 .benz-glow { background: linear-gradient(90deg, transparent, var(--benz), transparent); }
 .bmw-glow  { background: linear-gradient(90deg, transparent, var(--bmw),  transparent); }
@@ -705,7 +721,7 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
   .ov-stats { grid-template-columns: 1fr 1fr; }
 
   .viewer-wrap { flex-direction: column; height: auto; }
-  .viewer-half { height: 320px; }
+  .viewer-half { height: 360px; }
   .viewer-sep  { width: 100%; height: 1px; }
 
   .perf-grid { grid-template-columns: 1fr; }
