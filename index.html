@@ -37,6 +37,12 @@
       <span class="nav-slide-label" id="navSlideLabel">INTRO</span>
     </div>
     <div class="nav-counter" id="navCounter">1 / 7</div>
+    <button class="nav-fs-btn" id="fullscreenBtn" title="전체화면">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="fsIcon">
+        <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
+        <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+      </svg>
+    </button>
   </div>
 </nav>
 
@@ -451,12 +457,14 @@
         </div>
       </div>
     </div>
-    <!-- Feature Detail Bottom Sheet (fixed) -->
+    <!-- Feature Detail Panel — in-flow, pushes list up when open -->
     <div id="featureDetail" class="feature-detail">
-      <button class="fd-close" id="fdClose">✕</button>
-      <div class="fd-car-badge" id="fdCarBadge"></div>
-      <h3 class="fd-title" id="fdTitle"></h3>
-      <p class="fd-desc" id="fdDesc"></p>
+      <div class="fd-inner">
+        <button class="fd-close" id="fdClose">✕</button>
+        <div class="fd-car-badge" id="fdCarBadge"></div>
+        <h3 class="fd-title" id="fdTitle"></h3>
+        <p class="fd-desc" id="fdDesc"></p>
+      </div>
     </div>
   </div>
 
