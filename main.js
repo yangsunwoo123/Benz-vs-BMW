@@ -250,21 +250,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* Inject click indicator icons on all clickable items */
+  document.querySelectorAll('.fitem.clickable, .iitem.clickable').forEach(function(item) {
+    var icon = document.createElement('span');
+    icon.className = 'click-icon';
+    icon.innerHTML = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+    item.appendChild(icon);
+  });
+
   /* Clickable items — works for .fitem.clickable and .iitem.clickable */
+  var globalPanel = document.getElementById('featureDetail');
   document.querySelectorAll('.fitem.clickable, .iitem.clickable').forEach(function(item) {
     item.addEventListener('click', function() {
       var detail  = item.dataset.detail;
       var feature = item.dataset.feature;
       var car     = item.dataset.car;
+      var imgSrc  = item.dataset.image;
       if (!detail) return;
 
-      var slide = item.closest('.slide');
-      var panel = slide ? slide.querySelector('.feature-detail') : document.querySelector('.feature-detail');
+      var panel = globalPanel;
       if (!panel) return;
 
-      var badge = panel.querySelector('.fd-car-badge');
-      var title = panel.querySelector('.fd-title');
-      var desc  = panel.querySelector('.fd-desc');
+      var badge   = panel.querySelector('.fd-car-badge');
+      var title   = panel.querySelector('.fd-title');
+      var desc    = panel.querySelector('.fd-desc');
+      var imgWrap = panel.querySelector('.fd-img-wrap');
+      var img     = panel.querySelector('.fd-img');
       if (!badge || !title || !desc) return;
 
       document.querySelectorAll('.fitem.fitem-active, .iitem.fitem-active').forEach(function(el) {
@@ -281,6 +292,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       title.textContent = feature;
       desc.textContent  = detail;
+
+      if (imgSrc && imgWrap && img) {
+        img.src = imgSrc;
+        imgWrap.classList.add('has-image');
+      } else if (imgWrap) {
+        imgWrap.classList.remove('has-image');
+      }
+
       panel.classList.add('open');
     });
   });
